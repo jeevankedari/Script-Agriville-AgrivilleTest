@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Agriville Application Test Automation Test Suite]">
+  <test thread-count="5" name="Agriville Test Cases(failed)">
+    <classes>
+      <class name="com.agriville.qa.testcases.homePageAgrivilleTest">
+        <methods>
+          <include name="verifyNavigationToUFEFromDropDown"/>
+          <include name="verifySwitchDropDown"/>
+          <include name="verifyNavigateToMobileSite"/>
+          <include name="verifyNavigationToClassifieds"/>
+          <include name="verifyDiscussionCategories"/>
+          <include name="verifyNavigationToHomePageForums"/>
+          <include name="verifyNavigationToNews"/>
+          <include name="verifyPrivacyPolicy"/>
+          <include name="verifyCopyRight"/>
+          <include name="verifyNavigationToAgMarkets"/>
+          <include name="verifyBtmAgrivilleLogo"/>
+          <include name="verifyLoginAndRegisterLinkisDisplayed"/>
+          <include name="verifyNavigationToAgCareersFromDropDown"/>
+          <include name="verifyNavigationToRiskMgmtFromDropDown"/>
+          <include name="verifyNavigationToAgSearchFromDropDown"/>
+          <include name="verifyAboutUS"/>
+          <include name="verifyMostPopularThreads"/>
+          <include name="verifyContactUS"/>
+          <include name="verifyNavigationToFarmsAppsFromDropDown"/>
+          <include name="verifyChatPostGuideLines"/>
+          <include name="verifyTermsOfUse"/>
+          <include name="verifyNavigationToRegisterNowFrmDropDwn"/>
+          <include name="TearDown"/>
+          <include name="verifyNavigationToRealEstateFromDropDown"/>
+          <include name="verifySearchField"/>
+          <include name="verifyNavigationToRegisterPage"/>
+          <include name="verifyNavigationToFarmsDotCom"/>
+          <include name="verifyMostRecentThreads"/>
+          <include name="verifyNavigationToPigChampFromDropDown"/>
+          <include name="agrivilleLogoisDisplayed"/>
+          <include name="verifyNavigationToNewsFromDropDown"/>
+          <include name="verifyNavigationToForgotYourPwdFrmDropDwn"/>
+          <include name="verifyLoginForm"/>
+          <include name="verifyNavigationToClassifiedsFromDropDown"/>
+          <include name="verifyNavigationToAgrivilleCommunityFromDropDown"/>
+          <include name="SetUp"/>
+          <include name="verifyNavigationToMarketsFromDropDown"/>
+        </methods>
+      </class> <!-- com.agriville.qa.testcases.homePageAgrivilleTest -->
+    </classes>
+  </test> <!-- Agriville Test Cases(failed) -->
+</suite> <!-- Failed suite [Agriville Application Test Automation Test Suite] -->

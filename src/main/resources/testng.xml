@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Agriville Application Test Automation Test Suite">
+
+	
+
+<test name="Agriville Test Cases">
+		<classes>
+			<class name="com.agriville.qa.testcases.homePageAgrivilleTest"></class>
+			
+		</classes>
+	</test>
+	
+</suite>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="17" total="18" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="150241" started-at="2019-09-18T13:52:57 IST" finished-at="2019-09-18T13:55:27 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="150241" started-at="2019-09-18T13:52:57 IST" finished-at="2019-09-18T13:55:27 IST">
+      <class name="com.agriville.qa.testcases.disCategoriesTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.agriville.qa.testcases.disCategoriesTest@11b4bf5]" name="SetUp" is-config="true" duration-ms="15469" started-at="2019-09-18T13:52:57 IST" finished-at="2019-09-18T13:53:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="verifyLastPostByWithLogin()[pri:17, instance:com.agriville.qa.testcases.disCategoriesTest@11b4bf5]" name="verifyLastPostByWithLogin" duration-ms="134081" started-at="2019-09-18T13:53:12 IST" finished-at="2019-09-18T13:55:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLastPostByWithLogin -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.agriville.qa.testcases.disCategoriesTest@11b4bf5]" name="TearDown" is-config="true" duration-ms="655" started-at="2019-09-18T13:55:26 IST" finished-at="2019-09-18T13:55:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.agriville.qa.testcases.disCategoriesTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
