@@ -5,7 +5,7 @@
     <classes>
       <class name="com.agriville.qa.testcases.disCategoriesTest">
         <methods>
-          <include name="verifyPaginationAtBottom"/>
+          <include name="verifyShowThreadsLast100DaysDesc"/>
           <include name="SetUp"/>
           <include name="TearDown"/>
         </methods>

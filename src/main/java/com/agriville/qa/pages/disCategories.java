@@ -11,10 +11,13 @@ import java.util.List;
 import java.util.Locale;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.agriville.qa.base.TestBase;
 import com.agriville.qa.util.testUtil;
@@ -73,11 +76,15 @@ public class disCategories  extends TestBase
 	@FindBy(xpath="//div[contains(text(),'thread display options')]")
 	WebElement BtmDispOptionsThread;
 	
+	
+	
 	@FindBy(xpath="//div[@id='thread-expand-row']//select[@id='sel_daysprune']")
 	WebElement BtmBeginning;
 	
-	@FindBy(xpath="//div[@id='thread-expand-row']//select[@id='sel_sort']")
-	WebElement BtmThreadStartTime;
+	
+	
+	@FindBy(xpath="//div[@id='thread-expand-row']//form//select[@id='sel_sort']")
+	WebElement BtmThreadSort;
 	
 	@FindBy(xpath="//ul[@class='tool-menu']//input[@id='radio_asc']")
 	WebElement BtmAscOrder;
@@ -179,6 +186,15 @@ public class disCategories  extends TestBase
 	@FindBy(xpath="//div[@id='yui-gen1']")
 	WebElement FirstLastPostBy;
 	
+	@FindBy(xpath="//div[@class='options_input_block']//input[@type='submit']")
+	WebElement BtnBtmShowThreads;
+	
+	@FindBy(xpath="//span[@class='understated']")
+	WebElement MsgForumTop;
+	
+	@FindBy(xpath="//h2")
+	List<WebElement> H2OnSubPage;
+	
 	//Actions
 	
 	public void clickBeefProd()
@@ -186,11 +202,7 @@ public class disCategories  extends TestBase
 		BeefProd.click();
 	}
 	
-	public void clickOnAgrivilleLogo()
-	{
-		AgrivilleLogo.click();
-	}
-	
+
 	
 	public ArrayList<Boolean> verifySearchResults()
 	{
@@ -209,7 +221,7 @@ public class disCategories  extends TestBase
 	
 	public String TxtBxSearch()
 	{
-		testUtil.waitForElement(TxtBxSearch);
+		testUtil.ElementIsDisplayed(TxtBxSearch);
 		return TxtBxSearch.getAttribute("placeholder");
 	}
 	
@@ -246,10 +258,8 @@ public class disCategories  extends TestBase
 		return ColLastPostBy.getText().trim();
 	}
 	
-	public void BtmDispOptionsThread()
-	{
-		BtmDispOptionsThread.click();
-	}
+	
+
 	
 	public ArrayList<String> SelectSortThreads()
 	{
@@ -691,6 +701,175 @@ public class disCategories  extends TestBase
 			{
 				return FirstLastPostBy.getText().trim();
 			}
+			
+			public void clickBtmDispOptionsThread()
+			{
+				
+				BtmDispOptionsThread.click();
+			}
+			
+			
+			
+			public ArrayList<String> BtmBeginning()
+			{
+				
+				testUtil.ElementIsClickable(BtmBeginning);
+				ArrayList<String> listObj=new ArrayList<String>();
+				Select SelectDD=new Select(BtmBeginning);
+				List<WebElement> dropDownValue = SelectDD.getOptions();
+				
+				for(int i=0;i<dropDownValue.size();i++)
+				{
+					listObj.add(dropDownValue.get(i).getText());
+				}
+				return listObj;
+				
+			}
+			
+			
+			
+			
+			public ArrayList<String> BtmThreadSort()
+			{
+				testUtil.ElementIsClickable(BtmThreadSort);
+				ArrayList<String> listObj=new ArrayList<String>();
+				Select SelectDD=new Select(BtmThreadSort);
+				List<WebElement> dropDownValue = SelectDD.getOptions();
+				
+				for(int i=0;i<dropDownValue.size();i++)
+				{
+					listObj.add(dropDownValue.get(i).getText());
+				}
+				return listObj;
+				
+			}
+			
+			public String MsgForumTop()
+			{
+				return MsgForumTop.getText().trim();
+			}
+			
+			public void clickBtnBtmShowThreads()
+			{
+				JavascriptExecutor jsclick=(JavascriptExecutor)driver;
+				jsclick.executeScript("arguments[0].click();",BtnBtmShowThreads);
+				
+			}
+			
+			
+			
+		
+			
+			public ArrayList<Boolean> H2IsDisplayed()
+			{
+				ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+				for(int i=0;i<H2OnSubPage.size();i++)
+				{
+					listObj.add(H2OnSubPage.get(i).isDisplayed());
+				}
+				
+				return listObj;
+				
+			}
+		
+			public void SelectLastDay()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLastDay=new Select(BtmBeginning);
+				SelectLastDay.selectByVisibleText("Last Day");
+				
+			}
+			
+			public void SelectLast2Day()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last 2 Days");
+				
+			}
+			
+			public void SelectLastWeek()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last Week");
+				
+			}
+			
+			public void SelectLast10Days()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last 10 Days");
+				
+			}
+			
+			public void SelectLast2Weeks()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last 2 Weeks");
+				
+			}
+			
+			public void SelectLastMonth()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last Month");
+				
+			}
+			
+			public void SelectLast45Days()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last 45 Days");
+				
+			}
+			
+			public void SelectLast2Months()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last 2 Months");
+				
+			}
+			
+			
+			public void SelectLast75Days()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last 75 Days");
+				
+			}
+			
+			public void SelectLast100Days()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last 100 Days");
+				
+			}
+			
+			public void SelectLastYear()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Last Year");
+				
+			}
+			
+			public void SelectBeginning()
+			{
+				testUtil.ElementIsClickable(BtmBeginning);
+				Select SelectLast2Day=new Select(BtmBeginning);
+				SelectLast2Day.selectByVisibleText("Beginning");
+				
+			}
+			
+			
 }
 	
 	

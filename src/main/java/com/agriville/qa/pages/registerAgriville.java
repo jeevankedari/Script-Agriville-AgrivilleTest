@@ -307,7 +307,7 @@ WebElement MsgSuccessFullACReg;
 	
 	public String H1ErrorsRegistration()
 	{
-		testUtil.waitForElement(H1ErrorsRegistration);
+		testUtil.ElementIsDisplayed(H1ErrorsRegistration);
 		return H1ErrorsRegistration.getText().trim();
 	}
 	
@@ -316,49 +316,49 @@ WebElement MsgSuccessFullACReg;
 	
 	public String MsgRequiredFieldsBlank()
 	{
-		testUtil.waitForElement(MsgRequiredFieldsBlank);
+		testUtil.ElementIsDisplayed(MsgRequiredFieldsBlank);
 		return MsgRequiredFieldsBlank.getText().trim();
 	}
 	
 	public String MsgEmail()
 	{
-		testUtil.waitForElement(MsgEmail);
+		testUtil.ElementIsDisplayed(MsgEmail);
 		return MsgEmail.getText().trim();
 	}
 	
 	public String MsgUserName()
 	{
-		testUtil.waitForElement(MsgUserName);
+		testUtil.ElementIsDisplayed(MsgUserName);
 		return MsgUserName.getText().trim();
 	}
 	
 	public String MsgCaptcha()
 	{
-		testUtil.waitForElement(MsgCaptcha);
+		testUtil.ElementIsDisplayed(MsgCaptcha);
 		return MsgCaptcha.getText().trim();
 	}
 	
 	public String MsgFName()
 	{
-		testUtil.waitForElement(MsgFName);
+		testUtil.ElementIsDisplayed(MsgFName);
 		return MsgFName.getText().trim();
 	}
 	
 	public String MsgLName()
 	{
-		testUtil.waitForElement(MsgLName);
+		testUtil.ElementIsDisplayed(MsgLName);
 		return MsgLName.getText().trim();
 	}
 	
 	public String MsgZipPostal()
 	{
-		testUtil.waitForElement(MsgZipPostal);
+		testUtil.ElementIsDisplayed(MsgZipPostal);
 		return MsgZipPostal.getText().trim();
 	}
 	
 	public String MsgInvalidZip()
 	{
-		testUtil.waitForElement(MsgInvalidZip);
+		testUtil.ElementIsDisplayed(MsgInvalidZip);
 		return MsgInvalidZip.getText().trim();
 		
 	}
@@ -385,7 +385,7 @@ WebElement MsgSuccessFullACReg;
 	
 	public String H1MsgAfterRegistration()
 	{
-		testUtil.waitForElement(H1MsgAfterRegistration);
+		testUtil.ElementIsDisplayed(H1MsgAfterRegistration);
 		return H1MsgAfterRegistration.getText().trim();
 	}
 	
@@ -397,33 +397,33 @@ WebElement MsgSuccessFullACReg;
 	
 	public String MsgTopforShortUserName()
 	{
-		testUtil.waitForElement(MsgTopforShortUserName);
+		testUtil.ElementIsDisplayed(MsgTopforShortUserName);
 		return MsgTopforShortUserName.getText().trim();
 	}
 	
 	public String MsgShortUserName()
 	{
-		testUtil.waitForElement(MsgShortUserNameTBX);
+		testUtil.ElementIsDisplayed(MsgShortUserNameTBX);
 		return MsgShortUserNameTBX.getText().trim();
 	}
 	
 	public String MsgExistingUserName()
 	{
-		testUtil.waitForElement(MsgExistingUserName);
+		testUtil.ElementIsDisplayed(MsgExistingUserName);
 		return MsgExistingUserName.getText().trim();
 	}
 	
 	
 	public String MsgUserNameTBX()
 	{
-		testUtil.waitForElement(MsgUserNameTBX);
+		testUtil.ElementIsDisplayed(MsgUserNameTBX);
 		return MsgUserNameTBX.getText().trim().substring(0,79);
 	}
 	
 	
 	public String H1LostPassword()
 	{
-		testUtil.waitForElement(H1LostPassword);
+		testUtil.ElementIsDisplayed(H1LostPassword);
 		return H1LostPassword.getText().trim();
 	}
 	
@@ -435,13 +435,13 @@ WebElement MsgSuccessFullACReg;
 	
 	public String MsgTwoMisMatchEmail()
 	{
-		testUtil.waitForElement(MsgTwoMisMatchEmail);
+		testUtil.ElementIsDisplayed(MsgTwoMisMatchEmail);
 		return MsgTwoMisMatchEmail.getText().trim();
 	}
 	
 	public String MsgInvalidEmail()
 	{
-		testUtil.waitForElement(MsgInvalidEmail);
+		testUtil.ElementIsDisplayed(MsgInvalidEmail);
 		return MsgInvalidEmail.getText().trim();
 	}
 	
@@ -459,7 +459,7 @@ WebElement MsgSuccessFullACReg;
 	
 	public String MsgDidNotAcceptTC()
 	{
-		testUtil.waitForElement(MsgDidNotAcceptTC);
+		testUtil.ElementIsDisplayed(MsgDidNotAcceptTC);
 		return MsgDidNotAcceptTC.getText().trim();
 	}
 	
@@ -470,7 +470,7 @@ WebElement MsgSuccessFullACReg;
 	
 	public String MsgSuccessFullACReg()
 	{
-		testUtil.waitForElement(MsgSuccessFullACReg);
+		testUtil.ElementIsDisplayed(MsgSuccessFullACReg);
 		return MsgSuccessFullACReg.getText().trim();
 	}
 }

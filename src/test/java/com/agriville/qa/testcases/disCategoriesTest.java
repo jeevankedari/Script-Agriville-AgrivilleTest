@@ -78,13 +78,14 @@ public class disCategoriesTest extends TestBase
 		
 		S1.assertAll();
 		System.out.println("Verified all the Search Result Page");
-		disCategoriesObj.clickOnAgrivilleLogo();
+		loginPageObj.clickAgrivilleLogo();
 		
 	}
 	
 	@Test(priority=2)
 	public void verifySortThreadsDropDown()
 	{
+		SoftAssert S1=new SoftAssert();
 		disCategoriesObj.clickBeefProd();
 		
 		ArrayList<String> SortThread=disCategoriesObj.SelectSortThreads();
@@ -92,21 +93,23 @@ public class disCategoriesTest extends TestBase
 		
 		for(int i=0;i<SortThread.size();i++)
 		{
-			if((ExcelDataUtilObj.getData(sheetName, i+1, 0)).equals(SortThread.get(i)))
-			{
-				String Actual=SortThread.get(i);
-				String Expected=ExcelDataUtilObj.getData(sheetName, i+1, 0);
-				System.out.println(Actual+ " is Actual Value from Agriville Web Application and Expected Value is" + Expected+ " Matches");
+			String Actual=SortThread.get(i);
+			String Expected=ExcelDataUtilObj.getData(sheetName, i+1, 0);
+			S1.assertEquals(Actual, Expected);
+//			if((ExcelDataUtilObj.getData(sheetName, i+1, 0)).equals(SortThread.get(i)))
+//			{
 				
-			}
-			else
-			{
-				System.out.println("Values in Sort Thread dropdown do not Match");
-			}
+				System.out.println(Actual+ " is Actual Value from Agriville Web Application and Expected Value is " + Expected+ " Matches");
+				
+//			}
+//			else
+//			{
+//				System.out.println("Values in Sort Thread dropdown do not Match");
+//			}
 		}
-		
+		S1.assertAll();
 		System.out.println("All values in Sort Thread dropdown are Matched");
-		disCategoriesObj.clickOnAgrivilleLogo();
+		loginPageObj.clickAgrivilleLogo();
 	}
 	
 	@Test(priority=3)
@@ -140,7 +143,7 @@ public class disCategoriesTest extends TestBase
 			
 		}
 		S1.assertAll();
-		disCategoriesObj.clickOnAgrivilleLogo();
+		loginPageObj.clickAgrivilleLogo();
 		System.out.println("Verified Discussion Categories on Search Page and Verified Header, Title and BreadCrumb");
 			
 	}
@@ -182,7 +185,7 @@ public class disCategoriesTest extends TestBase
 				
 		}
 		S1.assertAll();
-		disCategoriesObj.clickOnAgrivilleLogo();
+		loginPageObj.clickAgrivilleLogo();
 	}
 	
 	@Test(priority=5)
@@ -227,7 +230,7 @@ public class disCategoriesTest extends TestBase
 				
 		}
 		S1.assertAll();
-		disCategoriesObj.clickOnAgrivilleLogo();
+		loginPageObj.clickAgrivilleLogo();
 	}
 	
 	@Test(priority=6)
@@ -239,7 +242,7 @@ public class disCategoriesTest extends TestBase
 		String Str1=testUtil.getTitleOfPage();
 		S1.assertEquals(Str1, "Farming and Agriculture Discussion Forum | Agriville.com");
 		System.out.println("Verified Navigation to Home Page from Forum Link");
-		disCategoriesObj.clickOnAgrivilleLogo();
+		loginPageObj.clickAgrivilleLogo();
 		S1.assertAll();
 		
 	}
@@ -258,7 +261,7 @@ public class disCategoriesTest extends TestBase
 		
 		System.out.println("User Not Logged in: User is navigated to Login Screen when user clicks on Post A Thread Button");
 		S1.assertAll();
-		disCategoriesObj.clickOnAgrivilleLogo();
+		loginPageObj.clickAgrivilleLogo();
 	}
 	
 	
@@ -562,7 +565,7 @@ public class disCategoriesTest extends TestBase
 		loginPageObj.clickAgrivilleLogo();
 		
 		S1.assertAll();
-		System.out.println("Verified Author name on Sub page and Member Page");
+		System.out.println("Verified Last Post By on Sub page and Member Page");
 				
 	}
 	
@@ -573,9 +576,10 @@ public class disCategoriesTest extends TestBase
 	
 	
 	
-	
-	public void verifyThreadDisplayOptions()
+	@Test(priority=17)
+	public void verifyThreadDisplayOptionsBeginning() throws InterruptedException
 	{
+		SoftAssert S1=new SoftAssert();
 		disCategoriesObj.clickBeefProd();
 		if(disCategoriesObj.isEmptyPagingTop())
 		{
@@ -583,15 +587,424 @@ public class disCategoriesTest extends TestBase
 		}
 		else
 		{
+			testUtil.ScrollToEndOfPage();
+			disCategoriesObj.clickBtmDispOptionsThread();
 		
+			ArrayList<String> Beginning=disCategoriesObj.BtmBeginning();
+			
+			for(int i=0;i<Beginning.size();i++)
+			{
+				String Actual=Beginning.get(i);
+				String Expected=ExcelDataUtilObj.getData(sheetName, i+1, 1);
+				S1.assertEquals(Actual, Expected);
+				System.out.println(Actual+ " is Actual Value from Agriville Web Application and Expected Value is " + Expected+ " Matches");
+			}
+			
+			System.out.println("All values in Beginning dropdown are Matched");
+			loginPageObj.clickAgrivilleLogo();
 		}
+		S1.assertAll();
+	}
+	
+	
+	@Test(priority=18)
+	public void verifyThreadDisplayOptionsSortThread() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+		disCategoriesObj.clickBeefProd();
+		if(disCategoriesObj.isEmptyPagingTop())
+		{
+			System.out.println("Paging is not Present on Current Page");
+		}
+		else
+		{
+			testUtil.ScrollToEndOfPage();
+			disCategoriesObj.clickBtmDispOptionsThread();
+		
+			ArrayList<String> ThreadSortAtBottom=disCategoriesObj.BtmThreadSort();
+			
+			for(int i=0;i<ThreadSortAtBottom.size();i++)
+			{
+				String Actual=ThreadSortAtBottom.get(i);
+				String Expected=ExcelDataUtilObj.getData(sheetName, i+1, 2);
+				S1.assertEquals(Actual, Expected);
+				System.out.println(Actual+ " is Actual Value from Agriville Web Application and Expected Value is " + Expected+ " Matches");
+			}
+			System.out.println("All values in Sort Thread dropdown are Matched");
+			loginPageObj.clickAgrivilleLogo();
+		}
+		S1.assertAll();
+	}
+	
+	@Test(priority=19)
+	public void verifyShowThreadsLastDayDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLastDay();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObjLastDay=new ArrayList<Boolean>();
+		listObjLastDay=disCategoriesObj.H2IsDisplayed();
+		if(listObjLastDay.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObjLastDay.size();i++)
+			{
+				S1.assertTrue(listObjLastDay.get(i));
+			}
+		}
+		S1.assertAll();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last Day in Descending Order");
+		
+	}
+
+	@Test(priority=20)
+	public void verifyShowThreadsLast2DayDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+		disCategoriesObj.SelectLast2Day();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last 2 Day in Descending Order");
+	}
+	
+	@Test(priority=21)
+	public void verifyShowThreadsLastWeekDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLastWeek();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last Week in Descending Order");
+	}
+	
+	
+	@Test(priority=22)
+	public void verifyShowThreadsLast10DaysDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLast10Days();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last 10 Day in Descending Order");
 	}
 
 	
+	@Test(priority=23)
+	public void verifyShowThreadsLast2WeeksDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
 	
-	
+		
+		disCategoriesObj.SelectLast2Weeks();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last 2 Weeks in Descending Order");
+	}
 
 
+	@Test(priority=24)
+	public void verifyShowThreadsLastMonthDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLastMonth();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last Month in Descending Order");
+	}
+	
+	
+	
+	@Test(priority=25)
+	public void verifyShowThreadsLast45DaysDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLast45Days();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last 45 Days in Descending Order");
+	}
+	
+	
+	@Test(priority=26)
+	public void verifyShowThreadsLast2MonthsDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLast2Months();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last 2 Months in Descending Order");
+	}
+	
+	
+	@Test(priority=26)
+	public void verifyShowThreadsLast75DaysDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLast75Days();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last 75 Days in Descending Order");
+	}
+	
+	
+	@Test(priority=27)
+	public void verifyShowThreadsLast100DaysDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLast100Days();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last 100 Days in Descending Order");
+	}
+	
+	@Test(priority=28)
+	public void verifyShowThreadsLastYearDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectLastYear();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last Year in Descending Order");
+	}
+	
+	
+	@Test(priority=29)
+	public void verifyShowThreadsBeginningDesc() throws InterruptedException
+	{
+		SoftAssert S1=new SoftAssert();
+//		disCategoriesObj.clickBeefProd();
+		testUtil.ScrollToEndOfPage();
+		disCategoriesObj.clickBtmDispOptionsThread();
+	
+		
+		disCategoriesObj.SelectBeginning();
+		disCategoriesObj.clickBtnBtmShowThreads();
+		ArrayList<Boolean> listObj=new ArrayList<Boolean>();
+		listObj=disCategoriesObj.H2IsDisplayed();
+		if(listObj.isEmpty())
+		{
+			String Str1=disCategoriesObj.MsgForumTop();
+			S1.assertEquals(Str1, "Try using the controls below to search for any older posts that may exist.");	
+		}
+		else
+		{
+			for(int i=0;i<listObj.size();i++)
+			{
+			S1.assertTrue(listObj.get(i));
+			}
+		}
+		S1.assertAll();
+//		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Verified Last Beginning in Descending Order");
+	}
+	
+	
 	@AfterClass
 	public void TearDown()
 	{

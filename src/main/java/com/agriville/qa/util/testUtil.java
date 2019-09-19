@@ -126,15 +126,19 @@ public class testUtil extends TestBase
 	}
 
 
-	public static WebElement waitForElement(WebElement item) 
+	public static WebElement ElementIsDisplayed(WebElement item) 
 	{
 	    WebDriverWait wait = new WebDriverWait(driver,30);
-	    
-	    
 	    wait.until(ExpectedConditions.visibilityOf(item));
 	    return item;
 	}
 	
+	public static WebElement ElementIsClickable(WebElement item) 
+	{
+	    WebDriverWait wait = new WebDriverWait(driver,30);
+	    wait.until(ExpectedConditions.elementToBeClickable(item));
+	    return item;
+	}
 	
 
 
