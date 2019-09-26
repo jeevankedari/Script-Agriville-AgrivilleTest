@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.agriville.qa.testcases.disCategoriesTest">
+      <class name="com.agriville.qa.testcases.topicDetailsTest">
         <methods>
-          <include name="verifyShowThreadsLast100DaysDesc"/>
+          <include name="verifyThreadDetailsDropdown_View"/>
           <include name="SetUp"/>
           <include name="TearDown"/>
         </methods>
-      </class> <!-- com.agriville.qa.testcases.disCategoriesTest -->
+      </class> <!-- com.agriville.qa.testcases.topicDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

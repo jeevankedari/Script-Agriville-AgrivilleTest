@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="31" total="32" passed="1">
+<testng-results skipped="0" failed="0" ignored="21" total="22" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59827" started-at="2019-09-19T18:52:54 IST" finished-at="2019-09-19T18:53:54 IST">
+  <suite name="Default suite" duration-ms="64750" started-at="2019-09-25T18:55:42 IST" finished-at="2019-09-25T18:56:47 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59827" started-at="2019-09-19T18:52:54 IST" finished-at="2019-09-19T18:53:54 IST">
-      <class name="com.agriville.qa.testcases.disCategoriesTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.agriville.qa.testcases.disCategoriesTest@bbe345]" name="SetUp" is-config="true" duration-ms="43044" started-at="2019-09-19T18:52:54 IST" finished-at="2019-09-19T18:53:37 IST">
+    <test name="Default test" duration-ms="64750" started-at="2019-09-25T18:55:42 IST" finished-at="2019-09-25T18:56:47 IST">
+      <class name="com.agriville.qa.testcases.topicDetailsTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.agriville.qa.testcases.topicDetailsTest@bbe345]" name="SetUp" is-config="true" duration-ms="17607" started-at="2019-09-25T18:55:42 IST" finished-at="2019-09-25T18:56:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="verifyShowThreadsBeginningDesc()[pri:29, instance:com.agriville.qa.testcases.disCategoriesTest@bbe345]" name="verifyShowThreadsBeginningDesc" duration-ms="15790" started-at="2019-09-19T18:53:38 IST" finished-at="2019-09-19T18:53:53 IST">
+        <test-method status="PASS" signature="verifyUNThreadDetails_View()[pri:21, instance:com.agriville.qa.testcases.topicDetailsTest@bbe345]" name="verifyUNThreadDetails_View" duration-ms="46421" started-at="2019-09-25T18:56:00 IST" finished-at="2019-09-25T18:56:46 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyShowThreadsBeginningDesc -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.agriville.qa.testcases.disCategoriesTest@bbe345]" name="TearDown" is-config="true" duration-ms="797" started-at="2019-09-19T18:53:53 IST" finished-at="2019-09-19T18:53:54 IST">
+        </test-method> <!-- verifyUNThreadDetails_View -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.agriville.qa.testcases.topicDetailsTest@bbe345]" name="TearDown" is-config="true" duration-ms="691" started-at="2019-09-25T18:56:46 IST" finished-at="2019-09-25T18:56:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.agriville.qa.testcases.disCategoriesTest -->
+      </class> <!-- com.agriville.qa.testcases.topicDetailsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

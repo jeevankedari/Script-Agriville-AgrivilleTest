@@ -11,21 +11,17 @@ import java.util.List;
 import java.util.Locale;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.agriville.qa.base.TestBase;
 import com.agriville.qa.util.testUtil;
 
-public class disCategories  extends TestBase 
+public class searchTopic  extends TestBase 
 {
 
-	public disCategories()
+	public searchTopic()
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -33,6 +29,8 @@ public class disCategories  extends TestBase
 	
 	@FindBy(xpath="//a[contains(text(),'Beef Production')]")
 	WebElement BeefProd;
+	
+	
 	
 	@FindBy(xpath="//div[@class='logo']/a")
 	WebElement AgrivilleLogo;
@@ -79,12 +77,12 @@ public class disCategories  extends TestBase
 	
 	
 	@FindBy(xpath="//div[@id='thread-expand-row']//select[@id='sel_daysprune']")
-	WebElement BtmBeginning;
+	WebElement SelectBtmBeginning;
 	
 	
 	
 	@FindBy(xpath="//div[@id='thread-expand-row']//form//select[@id='sel_sort']")
-	WebElement BtmThreadSort;
+	WebElement SelectBtmThreadSort;
 	
 	@FindBy(xpath="//ul[@class='tool-menu']//input[@id='radio_asc']")
 	WebElement BtmAscOrder;
@@ -168,7 +166,7 @@ public class disCategories  extends TestBase
 	@FindBy(xpath="//ul[@class='threadstats td alt']/li[contains(text(),'Views')]")
 	List<WebElement> Views;
 	
-	@FindBy(xpath="//div[@class='body-left-col']//th[contains(text(), 'Title / Thread Starter')]//parent::tr//following-sibling::tr[1]//h2")
+	@FindBy(xpath="//div[@class='body-left-col']//th[contains(text(), 'Title / Thread Starter')]//parent::tr//following-sibling::tr[1]//h2/a")
 	WebElement H2FirstSubCategory;
 	
 	@FindBy(xpath="//div[@class='breadcrumbs']//a[2]")
@@ -195,10 +193,33 @@ public class disCategories  extends TestBase
 	@FindBy(xpath="//h2")
 	List<WebElement> H2OnSubPage;
 	
+	@FindBy(xpath="//div[@class='content']//input[@id='radio_asc']")
+	WebElement AscOrder;
+	
+	@FindBy(xpath="//div//dl[@id='icon_legends']/dd")
+	List<WebElement> IconLegendValue;
+	
+	@FindBy(xpath="//div[@class='titlebar']")
+	WebElement FullForum;
+	
+	@FindBy(xpath="//h1[contains(text(),'Message')]")
+	WebElement MsgNoSearchResult;
+	
+	
+	
+	@FindBy(xpath="//div[@class='body-left-col']//th[contains(text(),'Last Post By')]//parent::tr//following-sibling::tr[1]//td[4]/a")
+	WebElement FirstLastPostByOnSearchResult;
+	
+	@FindBy(xpath="//div[@class='body-left-col']//th[contains(text(),'Last Post By')]//parent::tr//following-sibling::tr[1]//td[5]/input[@id='button']")
+	WebElement BtnFirstView;
+	
+	
+	
 	//Actions
 	
 	public void clickBeefProd()
 	{
+		testUtil.ElementIsClickable(BeefProd);
 		BeefProd.click();
 	}
 	
@@ -212,10 +233,11 @@ public class disCategories  extends TestBase
 		listObj.add(BtnSearch.isDisplayed());
 		listObj.add(DropDownArrow.isDisplayed());
 		listObj.add(SelectSortThreads.isDisplayed());
-		listObj.add(BtnPostAThread.isDisplayed());
 		return listObj;
 		
 	}
+	
+	
 	
 
 	
@@ -318,7 +340,8 @@ public class disCategories  extends TestBase
 		
 			for(int i=3;i<4;i++)
 			{
-				PagingTop.get(i).click();
+			testUtil.ElementIsClickable(PagingTop.get(i));	
+			PagingTop.get(i).click();
 			FontWeight = PagingTop.get(i).getCssValue("font-weight");
 			}
 	
@@ -333,6 +356,7 @@ public class disCategories  extends TestBase
 			for(int i=3;i<4;i++)
 			{
 				JavascriptExecutor jsclick =(JavascriptExecutor) driver;
+				testUtil.ElementIsClickable(PagingBottom.get(i));	
 				jsclick.executeScript("arguments[0].click();", PagingBottom.get(i));
 				//PagingBottom.get(i).click();
 				FontWeight = PagingBottom.get(i).getCssValue("font-weight");
@@ -351,6 +375,7 @@ public class disCategories  extends TestBase
 		
 			for(int i=4;i<=4;i++)
 			{
+			testUtil.ElementIsClickable(PagingTop.get(i));
 			PagingTop.get(i).click();
 			FontWeight = PagingTop.get(i).getCssValue("font-weight");
 			}
@@ -366,25 +391,29 @@ public class disCategories  extends TestBase
 		
 			for(int i=4;i<=4;i++)
 			{
-			PagingBottom.get(i).click();
-			FontWeight = PagingBottomLastPage.get(i).getCssValue("font-weight");
+				testUtil.ElementIsClickable(PagingBottom.get(i));	
+				PagingBottom.get(i).click();
+				FontWeight = PagingBottomLastPage.get(i).getCssValue("font-weight");
 			}
 			
 			
 		return FontWeight;
 	}
 			
-			public String SecondPageTop()
+			public String clickSecondPageTop()
 			{
+				testUtil.ElementIsClickable(SecondPageTop);
 				SecondPageTop.click();
 				return SecondPageTop.getCssValue("font-weight");
 			}
 			
-			public String SecondPageBottom()
+			public String clickSecondPageBottom()
 			{
 				
 				//SecondPageBottom.click();
 				testUtil.Scroll_DownFull_Page();
+				testUtil.ElementIsClickable(SecondPageBottom);	
+
 				JavascriptExecutor jsclick =(JavascriptExecutor) driver;
 				jsclick.executeScript("arguments[0].click();", SecondPageBottom);
 				
@@ -394,18 +423,21 @@ public class disCategories  extends TestBase
 			}
 			
 
-			public String FirstPageTop()
+			public String clickFirstPageTop()
 			{
+				testUtil.ElementIsClickable(FirstPageTop);
 				FirstPageTop.click();
 				return FirstPageTop.getCssValue("font-weight");
 			}
 			
 			
 			
-			public String FirstPageBottom()
+			public String clickFirstPageBottom()
 			{
 				//FirstPageBottom.click();
 				testUtil.Scroll_DownFull_Page();
+				testUtil.ElementIsClickable(FirstPageBottom);	
+				
 				JavascriptExecutor jsclick =(JavascriptExecutor) driver;
 				jsclick.executeScript("arguments[0].click();", FirstPageBottom);
 				return FirstPageBottom.getCssValue("font-weight");
@@ -415,16 +447,18 @@ public class disCategories  extends TestBase
 			{
 				String FontWeight = null;
 				
+				testUtil.ElementIsClickable(FirstBtnTop);
 				JavascriptExecutor jsclick =(JavascriptExecutor) driver;
 				jsclick.executeScript("arguments[0].click();", FirstBtnTop);
 				//
+				
 				FontWeight = BtnFontWeight.getCssValue("font-weight");
 				
 			
 				return FontWeight;
 			}	
 			public void clickBCrumbsForum()
-			{
+			{	testUtil.ElementIsClickable(BCrumbsForum);
 				BCrumbsForum.click();
 			}
 			public String clickPagingBottomLastPage()
@@ -434,6 +468,8 @@ public class disCategories  extends TestBase
 				
 				for(int i=0;i<1;i++)
 				{
+					testUtil.ElementIsClickable(PagingBottomLastPage.get(i));	
+
 					JavascriptExecutor jsclick =(JavascriptExecutor) driver;
 					jsclick.executeScript("arguments[0].click();", PagingBottomLastPage.get(i));
 					//PagingBottomLastPage.get(i).click();
@@ -454,8 +490,9 @@ public class disCategories  extends TestBase
 				
 					for(int i=2;i<3;i++)
 					{
+						testUtil.ElementIsClickable(PagingTop.get(i));
 						PagingTop.get(i).click();
-					FontWeight = PagingTop.get(i).getCssValue("font-weight");
+						FontWeight = PagingTop.get(i).getCssValue("font-weight");
 					}
 			
 				return FontWeight;
@@ -470,6 +507,7 @@ public class disCategories  extends TestBase
 					for(int i=2;i<3;i++)
 					{
 						JavascriptExecutor jsclick =(JavascriptExecutor) driver;
+						testUtil.ElementIsClickable(PagingBottom.get(i));	
 						jsclick.executeScript("arguments[0].click();", PagingBottom.get(i));
 						//PagingBottom.get(i).click();
 					FontWeight = PagingBottom.get(i).getCssValue("font-weight");
@@ -480,12 +518,15 @@ public class disCategories  extends TestBase
 			
 			public void clickDropDownArrow()
 			{
+				testUtil.ElementIsClickable(DropDownArrow);
 				DropDownArrow.click();
 			}
 			
 			
 			public void clickBtnPostAThread()
 			{
+				
+				testUtil.ElementIsClickable(BtnPostAThread);
 				BtnPostAThread.click();
 				
 			}
@@ -500,6 +541,7 @@ public class disCategories  extends TestBase
 				HashMap<Integer, ArrayList> listMap = new HashMap<Integer, ArrayList>();
 				for(int i=0;i<AllDiscCategories.size();i++)
 				{
+					testUtil.ElementIsClickable(DropDownArrow);
 					DropDownArrow.click();
 					String Str1=AllDiscCategories.get(i).getText();
 					h1OnCurrentPage.add(Str1);
@@ -665,11 +707,15 @@ public class disCategories  extends TestBase
 			
 			public void clickH2FirstSubCategory()
 			{
-				H2FirstSubCategory.click();
+				testUtil.ElementIsClickable(H2FirstSubCategory);
+				JavascriptExecutor jsclick=(JavascriptExecutor)driver;
+				jsclick.executeScript("arguments[0].click();",H2FirstSubCategory);
+				//H2FirstSubCategory.click();
 			}
 			
 			public void clicklinkToSubPage()
 			{
+				testUtil.ElementIsClickable(linkToSubPage);
 				linkToSubPage.click();
 			}
 			public String h1OnThreadPage()
@@ -679,6 +725,7 @@ public class disCategories  extends TestBase
 			
 			public void clickFirstAuthor()
 			{
+				testUtil.ElementIsClickable(FirstAuthor);
 				FirstAuthor.click();
 			}
 			
@@ -694,17 +741,19 @@ public class disCategories  extends TestBase
 			
 			public void clickFirstLastPostBy()
 			{
+				testUtil.ElementIsClickable(FirstLastPostBy);
 				FirstLastPostBy.click();
 			}
 			
 			public String FirstLastPostBy()
 			{
+				
 				return FirstLastPostBy.getText().trim();
 			}
 			
 			public void clickBtmDispOptionsThread()
 			{
-				
+				testUtil.ElementIsClickable(BtmDispOptionsThread);
 				BtmDispOptionsThread.click();
 			}
 			
@@ -713,9 +762,9 @@ public class disCategories  extends TestBase
 			public ArrayList<String> BtmBeginning()
 			{
 				
-				testUtil.ElementIsClickable(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
 				ArrayList<String> listObj=new ArrayList<String>();
-				Select SelectDD=new Select(BtmBeginning);
+				Select SelectDD=new Select(SelectBtmBeginning);
 				List<WebElement> dropDownValue = SelectDD.getOptions();
 				
 				for(int i=0;i<dropDownValue.size();i++)
@@ -731,9 +780,9 @@ public class disCategories  extends TestBase
 			
 			public ArrayList<String> BtmThreadSort()
 			{
-				testUtil.ElementIsClickable(BtmThreadSort);
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
 				ArrayList<String> listObj=new ArrayList<String>();
-				Select SelectDD=new Select(BtmThreadSort);
+				Select SelectDD=new Select(SelectBtmThreadSort);
 				List<WebElement> dropDownValue = SelectDD.getOptions();
 				
 				for(int i=0;i<dropDownValue.size();i++)
@@ -751,6 +800,7 @@ public class disCategories  extends TestBase
 			
 			public void clickBtnBtmShowThreads()
 			{
+				testUtil.ElementIsClickable(BtnBtmShowThreads);
 				JavascriptExecutor jsclick=(JavascriptExecutor)driver;
 				jsclick.executeScript("arguments[0].click();",BtnBtmShowThreads);
 				
@@ -774,64 +824,64 @@ public class disCategories  extends TestBase
 		
 			public void SelectLastDay()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLastDay=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLastDay=new Select(SelectBtmBeginning);
 				SelectLastDay.selectByVisibleText("Last Day");
 				
 			}
 			
 			public void SelectLast2Day()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last 2 Days");
 				
 			}
 			
 			public void SelectLastWeek()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last Week");
 				
 			}
 			
 			public void SelectLast10Days()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last 10 Days");
 				
 			}
 			
 			public void SelectLast2Weeks()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last 2 Weeks");
 				
 			}
 			
 			public void SelectLastMonth()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last Month");
 				
 			}
 			
 			public void SelectLast45Days()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last 45 Days");
 				
 			}
 			
 			public void SelectLast2Months()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last 2 Months");
 				
 			}
@@ -839,35 +889,177 @@ public class disCategories  extends TestBase
 			
 			public void SelectLast75Days()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last 75 Days");
 				
 			}
 			
 			public void SelectLast100Days()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last 100 Days");
 				
 			}
 			
 			public void SelectLastYear()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Last Year");
 				
 			}
 			
 			public void SelectBeginning()
 			{
-				testUtil.ElementIsClickable(BtmBeginning);
-				Select SelectLast2Day=new Select(BtmBeginning);
+				testUtil.ElementIsClickable(SelectBtmBeginning);
+				Select SelectLast2Day=new Select(SelectBtmBeginning);
 				SelectLast2Day.selectByVisibleText("Beginning");
 				
 			}
+			
+			
+			
+			public void SelectThreadTitle()
+			{
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
+				Select SelectLastDay=new Select(SelectBtmThreadSort);
+				SelectLastDay.selectByVisibleText("Thread Title");
+				
+			}
+			
+			
+			public void SelectLastPostTime()
+			{
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
+				Select SelectLastDay=new Select(SelectBtmThreadSort);
+				SelectLastDay.selectByVisibleText("Last Post Time");
+				
+			}
+			
+			public void SelectThreadStartTime()
+			{
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
+				Select SelectLastDay=new Select(SelectBtmThreadSort);
+				SelectLastDay.selectByVisibleText("Thread Start Time");
+				
+			}
+			
+			public void SelectNumberofReplies()
+			{
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
+				Select SelectLastDay=new Select(SelectBtmThreadSort);
+				SelectLastDay.selectByVisibleText("Number of Replies");
+				
+			}
+			
+			public void SelectNumberofViews()
+			{
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
+				Select SelectLastDay=new Select(SelectBtmThreadSort);
+				SelectLastDay.selectByVisibleText("Number of Views");
+				
+			}
+			
+			public void SelectThreadStarter()
+			{
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
+				Select SelectLastDay=new Select(SelectBtmThreadSort);
+				SelectLastDay.selectByVisibleText("Thread Starter");
+				
+			}
+			
+			public void SelectThreadRating()
+			{
+				testUtil.ElementIsClickable(SelectBtmThreadSort);
+				Select SelectLastDay=new Select(SelectBtmThreadSort);
+				SelectLastDay.selectByVisibleText("Thread Rating");
+				
+			}
+			
+			public void clickAscOrder()
+			{
+				testUtil.ElementIsClickable(AscOrder);
+				AscOrder.click();
+			}
+			
+			public void clickBtmOptionsIcon()
+			{
+				testUtil.ElementIsClickable(BtmOptionsIcon);
+				BtmOptionsIcon.click();
+			}
+			
+			public ArrayList<String> IconLegendValue()
+			{
+				ArrayList<String> listObj=new ArrayList<String>();
+				for(int i=0;i<IconLegendValue.size();i++)
+				{
+					listObj.add(IconLegendValue.get(i).getText());
+				}
+				return listObj;
+
+			}
+			
+			public void EnterDataSearchBx(String TextToSearch)
+			{
+				testUtil.ElementIsDisplayed(TxtBxSearch);
+				TxtBxSearch.sendKeys(TextToSearch);
+				
+			}
+			
+			public void clickBtnSearch()
+			{
+				testUtil.ElementIsClickable(BtnSearch);
+				
+				BtnSearch.click();
+			}
+			
+			public String FullForum()
+			{
+				String Str1=FullForum.getText().trim();
+				int i=FullForum.getText().indexOf(':');
+				String Str2=Str1.substring(0, i);
+				return Str2;
+			}
+			
+			
+			public String FullForumSearchKeyword()
+			{
+				String Str1=FullForum.getText().trim();
+				int i=FullForum.getText().indexOf(':');
+				int j=FullForum.getText().length();
+				String Str2=Str1.substring(i+2, j-2);
+				return Str2;
+			}
+		
+			public String MsgNoSearchResult()
+			{
+				return MsgNoSearchResult.getText().trim();
+			}
+
+		
+			
+			public void clickFirstLastPostByOnSearchResult()
+			{
+				testUtil.ElementIsClickable(FirstLastPostByOnSearchResult);
+				FirstLastPostByOnSearchResult.click();
+			}
+			
+			public String FirstLastPostByOnSearchResult()
+			{
+				return FirstLastPostByOnSearchResult.getText().trim();
+			}
+			
+			
+			
+			public void clickBtnFirstView()
+			{
+				testUtil.ElementIsClickable(BtnFirstView);
+				BtnFirstView.click();
+				
+			}
+			
 			
 			
 }

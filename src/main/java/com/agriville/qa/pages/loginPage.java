@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.agriville.qa.base.TestBase;
+import com.agriville.qa.util.testUtil;
 
 public class loginPage extends TestBase
 {
@@ -148,6 +149,7 @@ public class loginPage extends TestBase
 	
 	public void clickLogin()
 	{
+		testUtil.ElementIsClickable(LoginLink);
 		LoginLink.click();
 	}
 	
@@ -155,21 +157,25 @@ public class loginPage extends TestBase
 	
 	public void clickAgrivilleLogo()
 	{
+		testUtil.ElementIsClickable(AgrivilleLogo);
 		AgrivilleLogo.click();
 	}
 	
 	public void UserName(String username)
 	{
+		testUtil.ElementIsDisplayed(UserName);
 		UserName.sendKeys(username);
 	}
 	
 	public void Password(String password)
 	{
+		testUtil.ElementIsDisplayed(Password);
 		Password.sendKeys(password);
 	}
 	
 	public void clickLoginBtnOnLoginFrame()
 	{
+		testUtil.ElementIsDisplayed(LoginBtnOnLoginScreen);
 		LoginBtnOnLoginScreen.click();
 	}
 	public ArrayList<Boolean> UserNameAndPassword()
@@ -228,6 +234,7 @@ public class loginPage extends TestBase
 	
 	public void clickArrowBtn()
 	{
+		testUtil.ElementIsClickable(ArrowBtn);
 		ArrowBtn.click();
 	}
 	
