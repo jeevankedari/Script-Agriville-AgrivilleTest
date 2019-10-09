@@ -22,8 +22,11 @@ public class topicDetails extends TestBase
 	@FindBy(xpath="//input[@id='textfield']")
 	WebElement TxtBxSearch;
 	
-	@FindBy(xpath="//div[@class='body-left-col']//th[contains(text(), 'Title / Thread Starter')]//parent::tr//following-sibling::tr[1]//h2/a")
+	@FindBy(xpath="//div[@class='body-left-col']//th[contains(text(), 'Title / Thread Starter')]//parent::tr//following-sibling::tr[1]//h2/a[1]")
 	WebElement H2FirstSubCategory;
+	
+	@FindBy(xpath="//div[@class='body-left-col']//th[contains(text(), 'Title / Thread Starter')]//parent::tr//following-sibling::tr[2]//h2/a[1]")
+	WebElement H2SecondSubCategory;
 	
 	@FindBy(xpath="//h1")
 	WebElement h1OnThreadPage;
@@ -66,7 +69,18 @@ public class topicDetails extends TestBase
 	@FindBy(xpath="//div[@id='yui-gen0']")
 	WebElement UNThreadDetails;
 	
+	@FindBy(xpath="//li[@class='next']")
+	WebElement nextTopiclink;
 	
+	
+	@FindBy(xpath="//li[@class='prev']")
+	WebElement previousTopiclink;
+	
+	@FindBy(xpath="//a[contains(text(),'Return to Topic List ')]")
+	WebElement ReturnToTopicListlink;
+	
+	@FindBy(xpath="//a[contains(text(),'Reply to this Thread ')]")
+	WebElement ReplyToThisThreadLink;
 	
 	//Actions
 
@@ -75,6 +89,12 @@ public class topicDetails extends TestBase
 	{
 		return H2FirstSubCategory.getText().trim();
 	}
+	
+	public String H2SecondSubCategory()
+	{
+		return H2SecondSubCategory.getText().trim();
+	}
+
 	
 	
 	public void clickH2FirstSubCategory()
@@ -191,6 +211,31 @@ public class topicDetails extends TestBase
 		return UNThreadDetails.getText().trim();
 	}
 	
+	public void clicknextTopiclink()
+	{
+		testUtil.ElementIsClickable(nextTopiclink);
+		nextTopiclink.click();
+	}
+	
+	public void clickpreviousTopiclink()
+	{
+		testUtil.ElementIsClickable(previousTopiclink);
+		previousTopiclink.click();
+	}
+	
+	
+	public void clickReturnToTopicListlink()
+	{
+		testUtil.ElementIsClickable(ReturnToTopicListlink);
+		ReturnToTopicListlink.click();
+	}
+	
+	
+	public void clickReplyToThisThreadLink()
+	{
+		testUtil.ElementIsClickable(ReplyToThisThreadLink);
+		ReplyToThisThreadLink.click();
+	}
 	
 	
 	
