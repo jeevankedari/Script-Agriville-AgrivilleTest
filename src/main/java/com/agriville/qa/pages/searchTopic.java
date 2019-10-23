@@ -30,8 +30,6 @@ public class searchTopic  extends TestBase
 	@FindBy(xpath="//a[contains(text(),'Beef Production')]")
 	WebElement BeefProd;
 	
-	
-	
 	@FindBy(xpath="//div[@class='logo']/a")
 	WebElement AgrivilleLogo;
 	

@@ -393,7 +393,6 @@ public class topicDetailsTest extends TestBase
 	public void verifyPostMessageSearchResult_ActiveAcc() throws InterruptedException
 	{
 		SoftAssert S1=new SoftAssert();
-		
 		topicDetailsObj.EnterDataSearchBx(ExcelDataUtilObj.getData(sheetName, 1, 4));
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickH2FirstSubCategory();
@@ -495,7 +494,7 @@ public class topicDetailsTest extends TestBase
 		SoftAssert S1=new SoftAssert();
 		searchTopicObj.clickBeefProd();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str1= topicDetailsObj.MsgLoginPage();
 		String Str2=topicDetailsObj.MsgH1Login();
 		
@@ -521,7 +520,7 @@ public class topicDetailsTest extends TestBase
 		loginPageObj.clickLoginBtnOnLoginFrame();
 		searchTopicObj.clickBeefProd();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str4=topicDetailsObj.MsgAccountNotActivated();
 		S1.assertEquals(Str4, "Message");
 		loginPageObj.clickArrowBtn();
@@ -543,7 +542,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.EnterDataSearchBx(ExcelDataUtilObj.getData(sheetName, 1, 4));
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		
 		String Str1= topicDetailsObj.MsgLoginPage();
 		String Str2=topicDetailsObj.MsgH1Login();
@@ -571,7 +570,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.EnterDataSearchBx(ExcelDataUtilObj.getData(sheetName, 1, 4));
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str4=topicDetailsObj.MsgAccountNotActivated();
 		S1.assertEquals(Str4, "Message");
 		loginPageObj.clickArrowBtn();
@@ -596,7 +595,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickBtnFirstView();
 		
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		
 		String Str1= topicDetailsObj.MsgLoginPage();
 		String Str2=topicDetailsObj.MsgH1Login();
@@ -625,7 +624,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickBtnFirstView();
 		
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str4=topicDetailsObj.MsgAccountNotActivated();
 		S1.assertEquals(Str4, "Message");
 		loginPageObj.clickArrowBtn();
@@ -647,7 +646,7 @@ public class topicDetailsTest extends TestBase
 		SoftAssert S1=new SoftAssert();
 		searchTopicObj.clickBeefProd();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str1= topicDetailsObj.MsgLoginPage();
 		String Str2=topicDetailsObj.MsgH1Login();
 		
@@ -673,7 +672,7 @@ public class topicDetailsTest extends TestBase
 		loginPageObj.clickLoginBtnOnLoginFrame();
 		searchTopicObj.clickBeefProd();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str4=topicDetailsObj.MsgPostNewReply();
 		S1.assertEquals(Str4, "Post a New Reply");
 		loginPageObj.clickArrowBtn();
@@ -697,7 +696,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.EnterDataSearchBx(ExcelDataUtilObj.getData(sheetName, 1, 4));
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str1= topicDetailsObj.MsgLoginPage();
 		String Str2=topicDetailsObj.MsgH1Login();
 		S1.assertEquals(Str1, "Message");
@@ -724,7 +723,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.EnterDataSearchBx(ExcelDataUtilObj.getData(sheetName, 1, 4));
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickH2FirstSubCategory();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str4=topicDetailsObj.MsgPostNewReply();
 		S1.assertEquals(Str4, "Post a New Reply");
 		loginPageObj.clickArrowBtn();
@@ -746,7 +745,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.EnterDataSearchBx(ExcelDataUtilObj.getData(sheetName, 1, 4));
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickBtnFirstView();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str1= topicDetailsObj.MsgLoginPage();
 		String Str2=topicDetailsObj.MsgH1Login();
 		S1.assertEquals(Str1, "Message");
@@ -773,7 +772,7 @@ public class topicDetailsTest extends TestBase
 		topicDetailsObj.EnterDataSearchBx(ExcelDataUtilObj.getData(sheetName, 1, 4));
 		topicDetailsObj.clickBtnSearch();
 		topicDetailsObj.clickBtnFirstView();
-		topicDetailsObj.clickBtnReply();
+		topicDetailsObj.clickFirstBtnReply();
 		String Str4=topicDetailsObj.MsgPostNewReply();
 		S1.assertEquals(Str4, "Post a New Reply");
 		loginPageObj.clickArrowBtn();

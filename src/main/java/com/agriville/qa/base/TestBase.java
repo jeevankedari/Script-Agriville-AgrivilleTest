@@ -6,14 +6,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase
 {
@@ -45,7 +41,9 @@ public class TestBase
 		if(browserName.equals("chrome"))
 		{
 			
-			System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chrome_Driver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\Gecko Drivers\\Chrome_Driver_win32\\chromedriver.exe");
+			
+			
 //			ChromeOptions options = new ChromeOptions();
 //			options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 			
@@ -56,13 +54,13 @@ public class TestBase
 			else if(browserName.equals("MFF"))
 			{
 				
-				System.setProperty("webdriver.gecko.driver", "E:\\Script AgCareers\\Gecko Driver\\Firefox_GeckoWin32");
+				System.setProperty("webdriver.gecko.driver", "E:\\Gecko Drivers\\Firefox_GeckoWin32\\");
 				driver=new FirefoxDriver();
 			}
 		
 	else if(browserName.equals("IE"))
 	{
-		System.setProperty("webdriver.ie.driver","E:\\Script AgCareers\\Gecko Driver\\IEDriverServer_Win32_3.12.0" );
+		System.setProperty("webdriver.ie.driver","E:\\Gecko Drivers\\IEDriverServer_Win32_3.12.0\\" );
 		driver = new InternetExplorerDriver();
 	}
 	

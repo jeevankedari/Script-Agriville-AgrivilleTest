@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.agriville.qa.testcases.AddEditDeleteTopicTest">
+      <class name="com.agriville.qa.testcases.LatestPostTest">
         <methods>
-          <include name="SetUp"/>
-          <include name="verifySubmitBtn"/>
           <include name="TearDown"/>
+          <include name="verifyMemberPage"/>
+          <include name="SetUp"/>
         </methods>
-      </class> <!-- com.agriville.qa.testcases.AddEditDeleteTopicTest -->
+      </class> <!-- com.agriville.qa.testcases.LatestPostTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

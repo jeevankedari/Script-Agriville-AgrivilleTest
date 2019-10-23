@@ -64,7 +64,7 @@ public class topicDetails extends TestBase
 	WebElement MsgAccountNotActivated;
 	
 	@FindBy(xpath="//table[@class='message-inner-table'][1]//img[contains(@id, 'quoteimg')]")
-	WebElement BtnReply;
+	WebElement BtnFirstReply;
 	
 	@FindBy(xpath="//div[@id='yui-gen0']")
 	WebElement UNThreadDetails;
@@ -194,10 +194,10 @@ public class topicDetails extends TestBase
 		return MsgAccountNotActivated.getText().trim();
 	}
 	
-	public void clickBtnReply()
+	public void clickFirstBtnReply()
 	{
-		testUtil.ElementIsClickable(BtnReply);
-		BtnReply.click();
+		testUtil.ElementIsClickable(BtnFirstReply);
+		BtnFirstReply.click();
 	}
 	
 	public void clickUNThreadDetails()
@@ -235,6 +235,11 @@ public class topicDetails extends TestBase
 	{
 		testUtil.ElementIsClickable(ReplyToThisThreadLink);
 		ReplyToThisThreadLink.click();
+	}
+	
+	public boolean BtnPostMsgisDisplayed()
+	{
+		return BtnPostMsg.isDisplayed();
 	}
 	
 	

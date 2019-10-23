@@ -2,7 +2,6 @@ package com.agriville.qa.testcases;
 
 import java.util.ArrayList;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -55,10 +54,7 @@ public class AddEditDeleteTopicTest extends TestBase
 	
 	
 	
-	public void loginWithInActiveAccount()
-	{
-		
-	}
+	
 	
 	//Verify Post A New Thread Page for InActive Accounts
 	@Test(priority=1)
@@ -66,6 +62,7 @@ public class AddEditDeleteTopicTest extends TestBase
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		searchTopicObj.clickBtnPostAThread();
 		String Str1=searchTopicObj.H1PostNewThread();
 		S1.assertEquals(Str1, "Post a New Thread","This is not Post Thread Button");
@@ -88,6 +85,7 @@ public class AddEditDeleteTopicTest extends TestBase
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithInActiveAccount();
+		searchTopicObj.clickBeefProd();
 		searchTopicObj.clickBtnPostAThread();
 		String Str1=searchTopicObj.MsgAccountNotActivated();
 		S1.assertEquals(Str1, "Message","User is not present on Login Screen");
@@ -104,6 +102,7 @@ public class AddEditDeleteTopicTest extends TestBase
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		searchTopicObj.clickBtnPostAThread();
 		AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 1, 0));
 		AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 1, 1));
@@ -126,6 +125,7 @@ public class AddEditDeleteTopicTest extends TestBase
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		searchTopicObj.clickBtnPostAThread();
 		AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 2, 0));
 		AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 2, 1));
@@ -171,6 +171,7 @@ public class AddEditDeleteTopicTest extends TestBase
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		searchTopicObj.clickBtnPostAThread();
 		AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 4, 0));
 		AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 4, 1));
@@ -191,6 +192,7 @@ public class AddEditDeleteTopicTest extends TestBase
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		searchTopicObj.clickBtnPostAThread();
 		AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 1, 0));
 		AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 1, 1));
@@ -212,6 +214,7 @@ public class AddEditDeleteTopicTest extends TestBase
 		{
 			SoftAssert S1=new SoftAssert();
 			testUtilObj.loginWithActiveAccount();
+			searchTopicObj.clickBeefProd();
 			searchTopicObj.clickBtnPostAThread();
 			AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 2, 0));
 			AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 2, 1));
@@ -255,6 +258,7 @@ public class AddEditDeleteTopicTest extends TestBase
 		{
 			SoftAssert S1=new SoftAssert();
 			testUtilObj.loginWithActiveAccount();
+			searchTopicObj.clickBeefProd();
 			searchTopicObj.clickBtnPostAThread();
 			AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 4, 0));
 			AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 4, 1));
@@ -276,6 +280,7 @@ public class AddEditDeleteTopicTest extends TestBase
 		{
 			SoftAssert S1=new SoftAssert();
 			testUtilObj.loginWithActiveAccount();
+			searchTopicObj.clickBeefProd();
 			searchTopicObj.clickBtnPostAThread();
 			AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 5, 0));
 			AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 5, 1));
@@ -297,11 +302,12 @@ public class AddEditDeleteTopicTest extends TestBase
 
 		//Verify Submit New Thread Button
 		//Enter all the Mandatory Data on Post A Thread and Click on Submit new Thread Button
-		@Test(priority=9)
+		@Test(priority=10)
 		public void verifySubmitBtn() throws InterruptedException
 		{
 			SoftAssert S1=new SoftAssert();
 			testUtilObj.loginWithActiveAccount();
+			searchTopicObj.clickBeefProd();
 			
 			searchTopicObj.clickBtnPostAThread();
 			AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 5, 0));
@@ -328,6 +334,7 @@ public class AddEditDeleteTopicTest extends TestBase
 		{
 			SoftAssert S1=new SoftAssert();
 			testUtilObj.loginWithActiveAccount();
+			searchTopicObj.clickBeefProd();
 			AddEditDeleteTopicObj.clickProfileLink();
 			String TitleThread=AddEditDeleteTopicObj.ThreadLink();
 			AddEditDeleteTopicObj.clickThreadLink();
@@ -359,6 +366,7 @@ public class AddEditDeleteTopicTest extends TestBase
 		{
 			SoftAssert S1=new SoftAssert();
 			testUtilObj.loginWithActiveAccount();
+			searchTopicObj.clickBeefProd();
 			AddEditDeleteTopicObj.clickProfileLink();
 			AddEditDeleteTopicObj.clickThreadLink();
 			AddEditDeleteTopicObj.clickEditLink();
@@ -387,11 +395,12 @@ public class AddEditDeleteTopicTest extends TestBase
 		}
 		
 		
-	@Test(priority=12)
+	@Test(priority=13)
 	public void verifyDescription_SaveChangesBtn() throws InterruptedException
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		AddEditDeleteTopicObj.clickProfileLink();
 		AddEditDeleteTopicObj.clickThreadLink();
 		AddEditDeleteTopicObj.clickEditLink();
@@ -409,11 +418,12 @@ public class AddEditDeleteTopicTest extends TestBase
 		loginPageObj.clickAgrivilleLogo();
 		System.out.println("Verified Description for the Save Changes Button");
 	}
-	@Test(priority=13)
+	@Test(priority=14)
 	public void verifyDescription_PreviewChangesBtn() throws InterruptedException
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		AddEditDeleteTopicObj.clickProfileLink();
 		AddEditDeleteTopicObj.clickThreadLink();
 		AddEditDeleteTopicObj.clickEditLink();
@@ -432,11 +442,12 @@ public class AddEditDeleteTopicTest extends TestBase
 		System.out.println("Verified Description for the Save Changes Button");
 	}
 	
-	@Test(priority=14)
+	@Test(priority=15)
 	public void verifyPreviewChangesforExistingThread() throws InterruptedException
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		AddEditDeleteTopicObj.clickProfileLink();
 		AddEditDeleteTopicObj.clickThreadLink();
 		AddEditDeleteTopicObj.clickEditLink();
@@ -456,11 +467,12 @@ public class AddEditDeleteTopicTest extends TestBase
 	}
 	//To Execute the Test Case Thread should be present in the account
 	//To Verify Save Changes button while editing the Thread
-	@Test(priority=15)
+	@Test(priority=16)
 	public void verifySaveChangesForExistingThread() throws InterruptedException
 	{
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
+		searchTopicObj.clickBeefProd();
 		AddEditDeleteTopicObj.clickProfileLink();
 		AddEditDeleteTopicObj.clickThreadLink();
 		AddEditDeleteTopicObj.clickEditLink();
@@ -490,13 +502,13 @@ public class AddEditDeleteTopicTest extends TestBase
 	//To Execute the Test Case Thread should be present in the account
 	//To Verify Delete button while editing the Thread
 	//To handle the Delete Test Case we need Only one Thread
-	@Test(priority=15)
+	@Test(priority=17)
 	public void verifyDeleteThread() throws InterruptedException
 	{
 		
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
-		
+		searchTopicObj.clickBeefProd();
 //		searchTopicObj.clickBtnPostAThread();
 //		AddEditDeleteTopicObj.EnterTitleForThread(ExcelDataUtilObj.getData(sheetName2, 8, 0));
 //		AddEditDeleteTopicObj.EnterDescription(ExcelDataUtilObj.getData(sheetName2, 8, 1));

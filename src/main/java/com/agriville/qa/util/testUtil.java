@@ -164,6 +164,8 @@ public class testUtil extends TestBase
 	    return item;
 	}
 	
+
+		
 	
 	
 	
@@ -182,7 +184,7 @@ public class testUtil extends TestBase
 		loginPageObj.UserName(ExcelDataUtilObj.getData(sheetName1, 2, 0));
 		loginPageObj.Password(ExcelDataUtilObj.getData(sheetName1, 2, 1));
 		loginPageObj.clickLoginBtnOnLoginFrame();
-		searchTopicObj.clickBeefProd();
+		
 	} 
 	
 	public void logOut() throws InterruptedException
@@ -208,7 +210,7 @@ public class testUtil extends TestBase
 		loginPageObj.UserName(ExcelDataUtilObj.getData(sheetName1, 1, 0));
 		loginPageObj.Password(ExcelDataUtilObj.getData(sheetName1, 1, 1));
 		loginPageObj.clickLoginBtnOnLoginFrame();
-		searchTopicObj.clickBeefProd();
+		
 	} 
 
 
