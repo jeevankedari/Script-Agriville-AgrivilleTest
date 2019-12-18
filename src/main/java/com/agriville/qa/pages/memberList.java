@@ -76,7 +76,7 @@ public class memberList extends TestBase
 	@FindBy(xpath="//a[contains(text(),'Posts')]")
 	WebElement linkPosts;
 	
-	@FindBy(xpath="//a[contains(text(),'Avatar')]")
+	@FindBy(xpath="//span[contains(text(),'Avatar')]")
 	WebElement linkAvatar;
 	
 	@FindBy(xpath="//a[@class='username']")

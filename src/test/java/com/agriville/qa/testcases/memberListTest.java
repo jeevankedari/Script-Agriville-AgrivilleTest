@@ -189,10 +189,6 @@ public class memberListTest extends TestBase
 		String linkAvatar=memberListObj.linkAvatar();
 		S1.assertEquals(linkAvatar, "Avatar","Avatar column not found");
 		
-		
-		
-		
-		
 		S1.assertAll();
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
@@ -254,11 +250,6 @@ public class memberListTest extends TestBase
 		String linkTop=memberListObj.linkTop();
 		S1.assertEquals(linkTop, "Top","Top link Not Found");
 		
-		
-		
-		
-		
-		
 		S1.assertAll();
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
@@ -319,7 +310,7 @@ public class memberListTest extends TestBase
 		String MostRecentThreadsH2OnHP=homePageAgrivilleObj.MostRecentThreadsH2OnHP();
 		S1.assertEquals(MostRecentThreadsH2OnHP,"MOST RECENT THREADS" );
 		String HPTitle= testUtil.getTitleOfPage();
-		S1.assertEquals(HPTitle, "Farming and Agriculture Discussion Forum1 | Agriville.com");
+		S1.assertEquals(HPTitle, "Farming and Agriculture Discussion Forum | Agriville.com");
 		
 		
 		
@@ -349,7 +340,7 @@ public class memberListTest extends TestBase
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.UNonMemberList();
-		System.out.println("Click Sort "+listObtain);
+		////System.out.println("Click Sort "+listObtain);
 		memberListObj.clickLinkUserName();
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain1=new ArrayList<String>();
@@ -359,11 +350,12 @@ public class memberListTest extends TestBase
 		{
 			S1.assertTrue(listObtain.get(i).equals(listObtain1.get(i)));	
 		}
-		System.out.println("Click Sort "+listObtain1);
+		//System.out.println("Click Sort "+listObtain1);
 		S1.assertAll();
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		System.out.println("UserName: Verified the Member List in Ascending Order");
 	}
 	
 	@Test(priority=8)
@@ -385,7 +377,7 @@ public class memberListTest extends TestBase
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.UNonMemberList();
-		System.out.println("Click Sort "+listObtain);
+		//System.out.println("Click Sort "+listObtain);
 		memberListObj.clickLinkUserName();
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain1=new ArrayList<String>();
@@ -400,6 +392,9 @@ public class memberListTest extends TestBase
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		
+		System.out.println("UserName: Verified the Member List in Descending Order");
+		
 	}
 	
 	@Test(priority=9)
@@ -422,7 +417,7 @@ public class memberListTest extends TestBase
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.UNonMemberList();
-		System.out.println("Click Sort "+listObtain);
+		//System.out.println("Click Sort "+listObtain);
 		memberListObj.clickLinkUserName();
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain1=new ArrayList<String>();
@@ -432,11 +427,13 @@ public class memberListTest extends TestBase
 		{
 			S1.assertTrue(listObtain.get(i).equals(listObtain1.get(i)));	
 		}
-		System.out.println("Click Sort "+listObtain1);
+		//System.out.println("Click Sort "+listObtain1);
 		S1.assertAll();
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		
+		System.out.println("Personal: Verified the Member List in Ascending Order");
 	}
 	
 	
@@ -460,12 +457,12 @@ public class memberListTest extends TestBase
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.UNonMemberList();
-		System.out.println("Click Sort "+listObtain);
+		//System.out.println("Click Sort "+listObtain);
 		memberListObj.clickLinkUserName();
 		memberListObj.clickLinkUserName();
 		ArrayList<String> listObtain1=new ArrayList<String>();
 		listObtain1=memberListObj.UNonMemberList();
-		System.out.println("Click Sort "+listObtain1);
+		//System.out.println("Click Sort "+listObtain1);
 		for(int i=0;i<listObtain.size();i++)
 		{
 			S1.assertTrue(listObtain.get(i).equals(listObtain1.get(i)));	
@@ -475,6 +472,7 @@ public class memberListTest extends TestBase
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Personal Messge: Verified the Member List in Descending Order");
 	}
 	
 	
@@ -483,7 +481,7 @@ public class memberListTest extends TestBase
 	@Test(priority=11)
 	public void verifySortPostFrmUserNameAsc() throws InterruptedException
 	{
-		memberListObj.clickIAgreeCookies();
+		//memberListObj.clickIAgreeCookies();
 		SoftAssert S1=new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
 		AddEditDeleteTopicObj.clickProfileLink();
@@ -499,7 +497,7 @@ public class memberListTest extends TestBase
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.NumberOfPostMemberList();
-		System.out.println("Click Sort "+listObtain);
+		//System.out.println("Click Sort "+listObtain);
 		memberListObj.clicklinkPosts();
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain1=new ArrayList<String>();
@@ -509,11 +507,12 @@ public class memberListTest extends TestBase
 		{
 			S1.assertTrue(listObtain.get(i).equals(listObtain1.get(i)));	
 		}
-		System.out.println("Click Sort "+listObtain1);
+		//System.out.println("Click Sort "+listObtain1);
 		S1.assertAll();
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		System.out.println("UserName: Verified the Member List in Ascending Order");
 	}
 	
 	@Test(priority=12)
@@ -535,7 +534,7 @@ public class memberListTest extends TestBase
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.NumberOfPostMemberList();
-		System.out.println("Click Sort "+listObtain);
+		//System.out.println("Click Sort "+listObtain);
 		memberListObj.clicklinkPosts();
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain1=new ArrayList<String>();
@@ -550,6 +549,7 @@ public class memberListTest extends TestBase
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		System.out.println("UserName: Verified the Member List in Descending Order");
 	}
 	
 	
@@ -573,7 +573,7 @@ public class memberListTest extends TestBase
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.NumberOfPostMemberList();
-		System.out.println("Click Sort "+listObtain);
+		//System.out.println("Click Sort "+listObtain);
 		memberListObj.clicklinkPosts();
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain1=new ArrayList<String>();
@@ -584,11 +584,12 @@ public class memberListTest extends TestBase
 		{
 			S1.assertTrue(listObtain.get(i).equals(listObtain1.get(i)));	
 		}
-		System.out.println("Click Sort "+listObtain1);
+		//System.out.println("Click Sort "+listObtain1);
 		S1.assertAll();
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Personal Message: Verified the Member List in Ascending Order");
 	}
 	
 	@Test(priority=14)
@@ -611,12 +612,12 @@ public class memberListTest extends TestBase
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain=new ArrayList<String>();
 		listObtain=memberListObj.NumberOfPostMemberList();
-		System.out.println("Click Sort "+listObtain);
+		//System.out.println("Click Sort "+listObtain);
 		memberListObj.clicklinkPosts();
 		memberListObj.clicklinkPosts();
 		ArrayList<String> listObtain1=new ArrayList<String>();
 		listObtain1=memberListObj.NumberOfPostMemberList();
-		System.out.println("Click Sort "+listObtain1);
+		//System.out.println("Click Sort "+listObtain1);
 		for(int i=0;i<listObtain.size();i++)
 		{
 			S1.assertTrue(listObtain.get(i).equals(listObtain1.get(i)));	
@@ -626,6 +627,7 @@ public class memberListTest extends TestBase
 		testUtil.Close_Tab_Switch_To_ParentTab();
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Personal Message: Verified the Member List in Descending Order");
 	}
 	
 	@AfterClass

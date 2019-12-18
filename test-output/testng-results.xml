@@ -1,21 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="13" total="14" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71660" started-at="2019-12-18T15:32:33 IST" finished-at="2019-12-18T15:33:44 IST">
+  <suite name="Default suite" duration-ms="599013" started-at="2019-12-18T16:03:10 IST" finished-at="2019-12-18T16:13:09 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71660" started-at="2019-12-18T15:32:33 IST" finished-at="2019-12-18T15:33:44 IST">
+    <test name="Default test" duration-ms="599013" started-at="2019-12-18T16:03:10 IST" finished-at="2019-12-18T16:13:09 IST">
       <class name="com.agriville.qa.testcases.memberListTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.agriville.qa.testcases.memberListTest@94e528]" name="SetUp" is-config="true" duration-ms="19119" started-at="2019-12-18T15:32:33 IST" finished-at="2019-12-18T15:32:52 IST">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="SetUp" is-config="true" duration-ms="35400" started-at="2019-12-18T16:03:10 IST" finished-at="2019-12-18T16:03:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="verifySortPostsFrmPersonalMsgDsc()[pri:14, instance:com.agriville.qa.testcases.memberListTest@94e528]" name="verifySortPostsFrmPersonalMsgDsc" duration-ms="51853" started-at="2019-12-18T15:32:52 IST" finished-at="2019-12-18T15:33:44 IST">
+        <test-method status="PASS" signature="verifyNavigationToListFromHP()[pri:1, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifyNavigationToListFromHP" duration-ms="42494" started-at="2019-12-18T16:03:46 IST" finished-at="2019-12-18T16:04:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigationToListFromHP -->
+        <test-method status="PASS" signature="verifyNavigationToListFromPersonalMsg()[pri:2, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifyNavigationToListFromPersonalMsg" duration-ms="29388" started-at="2019-12-18T16:04:28 IST" finished-at="2019-12-18T16:04:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigationToListFromPersonalMsg -->
+        <test-method status="PASS" signature="verifyMemberListPageFrmHP()[pri:3, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifyMemberListPageFrmHP" duration-ms="36501" started-at="2019-12-18T16:04:58 IST" finished-at="2019-12-18T16:05:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMemberListPageFrmHP -->
+        <test-method status="PASS" signature="verifyMemberListPageFrmPersonalMsg()[pri:4, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifyMemberListPageFrmPersonalMsg" duration-ms="42570" started-at="2019-12-18T16:05:34 IST" finished-at="2019-12-18T16:06:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMemberListPageFrmPersonalMsg -->
+        <test-method status="PASS" signature="verifyForumFromHP()[pri:5, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifyForumFromHP" duration-ms="31980" started-at="2019-12-18T16:06:17 IST" finished-at="2019-12-18T16:06:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForumFromHP -->
+        <test-method status="PASS" signature="verifyForumFrmPersonalMsg()[pri:6, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifyForumFrmPersonalMsg" duration-ms="40335" started-at="2019-12-18T16:06:49 IST" finished-at="2019-12-18T16:07:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForumFrmPersonalMsg -->
+        <test-method status="PASS" signature="verifySortUserNameFrmUserNameAsc()[pri:7, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortUserNameFrmUserNameAsc" duration-ms="46417" started-at="2019-12-18T16:07:29 IST" finished-at="2019-12-18T16:08:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortUserNameFrmUserNameAsc -->
+        <test-method status="PASS" signature="verifySortUserNameFrmUserNameDsc()[pri:8, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortUserNameFrmUserNameDsc" duration-ms="37108" started-at="2019-12-18T16:08:15 IST" finished-at="2019-12-18T16:08:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortUserNameFrmUserNameDsc -->
+        <test-method status="PASS" signature="verifySortUserNameFrmPersonalMsgAsc()[pri:9, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortUserNameFrmPersonalMsgAsc" duration-ms="36762" started-at="2019-12-18T16:08:52 IST" finished-at="2019-12-18T16:09:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortUserNameFrmPersonalMsgAsc -->
+        <test-method status="PASS" signature="verifySortUserNameFrmPersonalMsgDsc()[pri:10, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortUserNameFrmPersonalMsgDsc" duration-ms="41566" started-at="2019-12-18T16:09:29 IST" finished-at="2019-12-18T16:10:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortUserNameFrmPersonalMsgDsc -->
+        <test-method status="PASS" signature="verifySortPostFrmUserNameAsc()[pri:11, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortPostFrmUserNameAsc" duration-ms="40021" started-at="2019-12-18T16:10:11 IST" finished-at="2019-12-18T16:10:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortPostFrmUserNameAsc -->
+        <test-method status="PASS" signature="verifySortPostFrmUserNameDsc()[pri:12, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortPostFrmUserNameDsc" duration-ms="32532" started-at="2019-12-18T16:10:51 IST" finished-at="2019-12-18T16:11:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortPostFrmUserNameDsc -->
+        <test-method status="PASS" signature="verifySortPostFrmPersonalMsgAsc()[pri:13, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortPostFrmPersonalMsgAsc" duration-ms="61616" started-at="2019-12-18T16:11:23 IST" finished-at="2019-12-18T16:12:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortPostFrmPersonalMsgAsc -->
+        <test-method status="PASS" signature="verifySortPostsFrmPersonalMsgDsc()[pri:14, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="verifySortPostsFrmPersonalMsgDsc" duration-ms="43424" started-at="2019-12-18T16:12:25 IST" finished-at="2019-12-18T16:13:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySortPostsFrmPersonalMsgDsc -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.agriville.qa.testcases.memberListTest@94e528]" name="TearDown" is-config="true" duration-ms="631" started-at="2019-12-18T15:33:44 IST" finished-at="2019-12-18T15:33:44 IST">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.agriville.qa.testcases.memberListTest@bbe345]" name="TearDown" is-config="true" duration-ms="789" started-at="2019-12-18T16:13:08 IST" finished-at="2019-12-18T16:13:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

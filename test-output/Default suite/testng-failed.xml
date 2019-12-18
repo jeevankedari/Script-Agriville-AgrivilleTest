@@ -5,9 +5,17 @@
     <classes>
       <class name="com.agriville.qa.testcases.memberListTest">
         <methods>
+          <include name="verifySortUserNameFrmPersonalMsgAsc"/>
+          <include name="verifySortPostFrmPersonalMsgAsc"/>
+          <include name="verifySortUserNameFrmPersonalMsgDsc"/>
           <include name="TearDown"/>
+          <include name="verifySortUserNameFrmUserNameDsc"/>
+          <include name="verifySortUserNameFrmUserNameAsc"/>
           <include name="verifySortPostsFrmPersonalMsgDsc"/>
+          <include name="verifySortPostFrmUserNameAsc"/>
+          <include name="verifyForumFrmPersonalMsg"/>
           <include name="SetUp"/>
+          <include name="verifySortPostFrmUserNameDsc"/>
         </methods>
       </class> <!-- com.agriville.qa.testcases.memberListTest -->
     </classes>
