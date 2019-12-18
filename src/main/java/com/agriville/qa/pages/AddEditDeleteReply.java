@@ -37,14 +37,18 @@ public class AddEditDeleteReply extends TestBase
 	@FindBy(xpath="//div[@class='titlebar']/a[3]")
 	WebElement ThreadTitlelink;
 	
-	@FindBy(xpath="//strong[contains(text(),'jeevan.kedari')]")
-	List<WebElement> specificUserName;
+//	@FindBy(xpath="//strong[contains(text(),'jeevan.kedari')]")
+//	List<WebElement> specificUserName;
 	
 	@FindBy(xpath="//img[contains(@id, 'editimg')]")
 	List<WebElement> InitialEditBtn;
 	
 	@FindBy(xpath="//li[@class='activitybit forum_post']//a[2]")
-	List<WebElement> TheadTitleOnMemberPage;
+	List<WebElement> ThreadReplyOnMemberPage;
+	
+	@FindBy(xpath="//li[@class='activitybit forum_thread']//a[2]")
+	List<WebElement> ThreadTitleOnMemberPage;
+	
 	
 	
 	public AddEditDeleteReply()
@@ -117,23 +121,44 @@ public class AddEditDeleteReply extends TestBase
 				
 	}
 	
-	public void clickFirstTheadTitleOnMemberPage()
+	public void clickFirstThreadTitleOnMemberPage()
 	{
-		if(TheadTitleOnMemberPage.isEmpty())
+		if(ThreadTitleOnMemberPage.isEmpty())
 		{
 			System.out.println("All the Elements are deleted");
 		}
 		else
 		{
-			TheadTitleOnMemberPage.get(0).click();
+			ThreadTitleOnMemberPage.get(0).click();
 		}
 		
 	}
 	
-	public int TheadTitleOnMemberPage()
+	public int ThreadTitleOnMemberPage()
 	{
-		return TheadTitleOnMemberPage.size();
+		return ThreadTitleOnMemberPage.size();
 	}
+	
+	
+	public void clickFirstThreadReplyOnMemberPage()
+	{
+		if(ThreadReplyOnMemberPage.isEmpty())
+		{
+			System.out.println("All the Elements are deleted");
+		}
+		else
+		{
+			ThreadReplyOnMemberPage.get(0).click();
+		}
+		
+	}
+	
+	public int ThreadReplyOnMemberPage()
+	{
+		return ThreadReplyOnMemberPage.size();
+	}
+	
+	
 	
 	public void clickEditBtn()
 	{

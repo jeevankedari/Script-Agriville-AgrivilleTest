@@ -32,6 +32,10 @@ public class LatestPostTest extends TestBase
 	String sheetName2 = "PostThread";
 	String sheetName3 = "Reply";
 	
+	public LatestPostTest()
+	{
+		super();
+	}
 	
 	@BeforeClass
 	public void SetUp() 
@@ -104,6 +108,18 @@ public class LatestPostTest extends TestBase
 		
 		
 	}
+	
+	
+	
+	@Test(priority=3)
+	public void AddReplies() throws InterruptedException
+	{
+//		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		AddEditDeleteTopicObj.clickProfileLink();
+		
+	}
+	
 	
 	
 	@AfterClass

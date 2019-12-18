@@ -37,7 +37,7 @@ public class testUtil extends TestBase
 		
 	}
 	
-	public void Switch_To_ChildTab() throws InterruptedException
+	public static void Switch_To_ChildTab() throws InterruptedException
 	{
 		String parentTab = driver.getWindowHandle();
 		Set<String> AllTab=driver.getWindowHandles();
@@ -51,6 +51,25 @@ public class testUtil extends TestBase
 			
 		}
 					
+	}
+	
+	public static void Close_Tab_Switch_To_ParentTab()
+	{
+		
+		String parentTab = driver.getWindowHandle();
+		Set<String> AllTab=driver.getWindowHandles();
+		for(String childTab:AllTab)
+		{
+			if(!parentTab.equalsIgnoreCase(childTab))
+			{
+				driver.close();
+				driver.switchTo().window(childTab);
+				
+				
+			}
+			
+		}
+		
 	}
 	
 	public void Switch_To_ParentTab() throws InterruptedException
@@ -153,6 +172,7 @@ public class testUtil extends TestBase
 	public static WebElement ElementIsDisplayed(WebElement item) 
 	{
 	    WebDriverWait wait = new WebDriverWait(driver,30);
+	    
 	    wait.until(ExpectedConditions.visibilityOf(item));
 	    return item;
 	}
@@ -164,8 +184,11 @@ public class testUtil extends TestBase
 	    return item;
 	}
 	
-
-		
+public static void clickLocator(WebElement locator)
+{
+	locator.click();
+}
+	
 	
 	
 	

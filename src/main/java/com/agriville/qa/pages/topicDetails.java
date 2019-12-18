@@ -149,9 +149,9 @@ public class topicDetails extends TestBase
 	public void clickBtnSearch()
 	{
 		testUtil.ElementIsClickable(BtnSearch);
-		
 		BtnSearch.click();
 	}
+	
 	public String NameOfMember()
 	{
 		return NameOfMember.getText().trim();

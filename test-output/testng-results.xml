@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="13" total="14" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="229988" started-at="2019-10-22T18:53:44 IST" finished-at="2019-10-22T18:57:34 IST">
+  <suite name="Default suite" duration-ms="71660" started-at="2019-12-18T15:32:33 IST" finished-at="2019-12-18T15:33:44 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="229988" started-at="2019-10-22T18:53:44 IST" finished-at="2019-10-22T18:57:34 IST">
-      <class name="com.agriville.qa.testcases.LatestPostTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.agriville.qa.testcases.LatestPostTest@b6cbcc]" name="SetUp" is-config="true" duration-ms="146071" started-at="2019-10-22T18:53:44 IST" finished-at="2019-10-22T18:56:10 IST">
+    <test name="Default test" duration-ms="71660" started-at="2019-12-18T15:32:33 IST" finished-at="2019-12-18T15:33:44 IST">
+      <class name="com.agriville.qa.testcases.memberListTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.agriville.qa.testcases.memberListTest@94e528]" name="SetUp" is-config="true" duration-ms="19119" started-at="2019-12-18T15:32:33 IST" finished-at="2019-12-18T15:32:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="verifyLatestPostWithNoData()[pri:2, instance:com.agriville.qa.testcases.LatestPostTest@b6cbcc]" name="verifyLatestPostWithNoData" duration-ms="80623" started-at="2019-10-22T18:56:11 IST" finished-at="2019-10-22T18:57:31 IST">
+        <test-method status="PASS" signature="verifySortPostsFrmPersonalMsgDsc()[pri:14, instance:com.agriville.qa.testcases.memberListTest@94e528]" name="verifySortPostsFrmPersonalMsgDsc" duration-ms="51853" started-at="2019-12-18T15:32:52 IST" finished-at="2019-12-18T15:33:44 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLatestPostWithNoData -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.agriville.qa.testcases.LatestPostTest@b6cbcc]" name="TearDown" is-config="true" duration-ms="2662" started-at="2019-10-22T18:57:31 IST" finished-at="2019-10-22T18:57:34 IST">
+        </test-method> <!-- verifySortPostsFrmPersonalMsgDsc -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.agriville.qa.testcases.memberListTest@94e528]" name="TearDown" is-config="true" duration-ms="631" started-at="2019-12-18T15:33:44 IST" finished-at="2019-12-18T15:33:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.agriville.qa.testcases.LatestPostTest -->
+      </class> <!-- com.agriville.qa.testcases.memberListTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

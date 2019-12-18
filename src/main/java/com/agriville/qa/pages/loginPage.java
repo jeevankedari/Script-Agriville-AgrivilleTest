@@ -44,7 +44,7 @@ public class loginPage extends TestBase
 	WebElement ForgotPwdLink;
 
 	
-	@FindBy(xpath="//td/input[@value='Log in']")
+	@FindBy(xpath="//form[@id='navbar_loginform']//input[@class='button']")
 	WebElement LoginBtnOnLoginScreen;
 	
 	@FindBy(xpath="//tr/td[contains(text(),'Don’t have an Agriville account?')]")
@@ -175,8 +175,14 @@ public class loginPage extends TestBase
 	
 	public void clickLoginBtnOnLoginFrame()
 	{
-		testUtil.ElementIsDisplayed(LoginBtnOnLoginScreen);
-		LoginBtnOnLoginScreen.click();
+		testUtil.ElementIsClickable(LoginBtnOnLoginScreen);
+		JavascriptExecutor jsclick=(JavascriptExecutor)driver;
+		jsclick.executeScript("arguments[0].click();", LoginBtnOnLoginScreen);
+		
+		
+
+		
+//		LoginBtnOnLoginScreen.click();
 	}
 	public ArrayList<Boolean> UserNameAndPassword()
 	{

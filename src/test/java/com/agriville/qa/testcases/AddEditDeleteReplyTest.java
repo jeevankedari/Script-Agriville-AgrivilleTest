@@ -54,7 +54,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Post A message button on Thread Details Page
 	// Disc Categories-->Click on First Thread-->>Click on Post a Message
-	@Test(priority = 1)
+	@Test(priority = 1, invocationCount=3)
 	public void verifyPostANewReply_DiscCategoriesPostMessageBtn() throws InterruptedException {
 
 		SoftAssert S1 = new SoftAssert();
@@ -79,7 +79,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Post A message button on Thread Details Page
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on Post a Message
-	@Test(priority = 2)
+	@Test(priority = 2, invocationCount=3)
 	public void verifyPostANewReply_SearchResultPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -103,7 +103,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Post A message button on Thread Details Page
 	// Enter Keyword in Search box-->Click on View Button for First Thread-->>Click on Post a Message
-	@Test(priority = 3)
+	@Test(priority = 3, invocationCount=3)
 	public void verifyPostANewReply_ViewPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -128,7 +128,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Click on Disc Categories-->Click on First Thread-->>Click on Post a Message-->Enter Description and Click on Preview Post Button
-	@Test(priority = 4)
+	@Test(priority = 4, invocationCount=3)
 	public void verifyPreviewPost_DiscCategoriesPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -160,7 +160,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on Post a Message-->Enter Description and Click on Preview Post Button
-	@Test(priority = 5)
+	@Test(priority = 5, invocationCount=3)
 	public void verifyPreviewPost_SearchResultsPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -191,7 +191,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Enter Keyword in Search box-->Click on First View Button->>Click on Post a Message-->Enter Description and Click on Preview Post Button
-	@Test(priority = 6)
+	@Test(priority = 6, invocationCount=3)
 	public void verifyPreviewPost_ViewPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -226,7 +226,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Submit Reply Button
 	// Click on Disc Categories-->Click on First Thread-->>Click on Post a Message--> Enter Description and Click on Submit Reply Button
-	@Test(priority = 7)
+	@Test(priority = 7, invocationCount=3)
 	public void verifySubmitReply_DiscCategoriesPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -262,7 +262,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 	// Verify Submit Reply Button
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on Post a Message
 	// Enter Description and Click on Submit Reply Button
-	@Test(priority = 8)
+	@Test(priority = 8, invocationCount=3)
 	public void verifySubmitReply_SearchResultsPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -298,7 +298,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Submit Reply Button
 	// Enter Keyword in Search box-->Click on First View Button-->>Click on Post a Message-->Enter Description and Click on Submit Reply Button
-	@Test(priority = 9)
+	@Test(priority = 9, invocationCount=3)
 	public void verifySubmitReply_ViewPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -334,7 +334,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify the Breadcrumbs link
 	//// Click on Disc Categories-->Click on First Thread-->>Click on Post a Message-->Click on All the sub links
-	@Test(priority = 10)
+	@Test(priority = 10, invocationCount=3)
 	public void verifyBreadCrumbs_DiscCategoriesPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -373,7 +373,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify the Breadcrumbs link
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on Post a Message-->Click on All the sub links
-	@Test(priority = 11)
+	@Test(priority = 11, invocationCount=3)
 	public void verifyBreadCrumbs_SearchResultsPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -413,7 +413,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify the Breadcrumbs link
 	// Enter Keyword in Search box-->Click on First View Button-->>Click on Post a Message-->Click on All the sub links
-	@Test(priority = 12)
+	@Test(priority = 12, invocationCount=3)
 	public void verifyBreadCrumbs_ViewPostMsgBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -453,7 +453,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify First Reply button on Thread Details Page
 	// Disc Categories-->Thread Result Page-->Click on First Thread-->>Click on Reply Button
-	@Test(priority = 13)
+	@Test(priority = 13, invocationCount=3)
 	public void verifyPostANewReply_DiscCategoriesFirstReplyBtn() throws InterruptedException {
 
 		SoftAssert S1 = new SoftAssert();
@@ -477,7 +477,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify First Reply button on Thread Details Page
 	// Enter Keyword in Search box-->Thread Result Page-->Click on First Thread-->>Click on Reply button
-	@Test(priority = 14)
+	@Test(priority = 14, invocationCount=3)
 	public void verifyPostANewReply_SearchResultFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -501,7 +501,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify First Reply button on Thread Details Page
 	// Enter Keyword in Search box-->Thread Result Page-->Click on First View Button-->>Click on Reply Btn
-	@Test(priority = 15)
+	@Test(priority = 15, invocationCount=3)
 	public void verifyPostANewReply_ViewFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -526,7 +526,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Click on Disc Categories-->Click on First Thread-->>Click on First ReplyBtn-->Enter Description and Click on Preview Post Button
-	@Test(priority = 16)
+	@Test(priority = 16, invocationCount=3)
 	public void verifyPreviewPostFirstReplyBtn_DiscCategories() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -558,7 +558,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on First Reply-->Enter Description and Click on Preview Post Button
-	@Test(priority = 17)
+	@Test(priority = 17, invocationCount=3)
 	public void verifyPreviewFirstPostReplyBtn_SearchResults() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -592,7 +592,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 	// Verify Preview Post Button
 	// Enter Keyword in Search box-->Click on First View Button->>Click on Post a
 	// Message-->Enter Description and Click on Preview Post Button
-	@Test(priority = 18)
+	@Test(priority = 18, invocationCount=3)
 	public void verifyPreviewPostFirstReplyBtn_View() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -627,7 +627,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Submit Reply Button
 	// Click on Disc Categories-->Click on First Thread-->>Click on First Reply Button-->Enter Description and Click on Submit Reply Button
-	@Test(priority = 19)
+	@Test(priority = 19, invocationCount=3)
 	public void verifySubmitReply_DiscCategoriesFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -662,7 +662,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Submit Reply Button
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on First Reply button-->Enter Description and Click on Submit Reply Button
-	@Test(priority = 20)
+	@Test(priority = 20, invocationCount=3)
 	public void verifySubmitReply_SearchResultsFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -698,7 +698,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Submit Reply Button
 	// Enter Keyword in Search box-->Click on First View Button->>Click on First Reply Button-->Enter Description and Click on Submit Reply Button
-	@Test(priority = 21)
+	@Test(priority = 21, invocationCount=3)
 	public void verifySubmitReply_ViewFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -734,7 +734,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify the Breadcrumbs link
 	//// Click on Disc Categories-->Click on First Thread-->>Click on First Reply Button-->Click on All the sub links
-	@Test(priority = 22)
+	@Test(priority = 22, invocationCount=3)
 	public void verifyBreadCrumbs_DiscCategoriesFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -773,7 +773,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify the Breadcrumbs link
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on First Reply Button-->Click on All the sub links
-	@Test(priority = 23)
+	@Test(priority = 23, invocationCount=3)
 	public void verifyBreadCrumbs_SearchResultsFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -813,7 +813,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify the Breadcrumbs link
 	// Enter Keyword in Search box-->Click on First View Button-->>Click on First Reply Button-->Click on All the sub links
-	@Test(priority = 24)
+	@Test(priority = 24, invocationCount=3)
 	public void verifyBreadCrumbs_ViewFirstReplyBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -855,7 +855,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 	/**************************************************************************************************************************************/
 	// Verify Reply to this thread button on Thread Details Page
 	// Disc Categories-->Click on First Thread-->>Click on Reply to this thread at Bottom
-	@Test(priority = 25)
+	@Test(priority = 25, invocationCount=3)
 	public void verifyPostANewReply_DiscCategoriesReplyToThisThread() throws InterruptedException {
 
 		SoftAssert S1 = new SoftAssert();
@@ -879,7 +879,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Reply to this thread button on Thread Details Page
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on Reply to this Thread button at Bottom
-	@Test(priority = 26)
+	@Test(priority = 26, invocationCount=3)
 	public void verifyPostANewReply_SearchResultReplyToThisThread() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -903,7 +903,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Post A message button on Thread Details Page
 	// Enter Keyword in Search box-->Click on View Button for First Thread-->>Click on Reply to This Thread
-	@Test(priority = 27)
+	@Test(priority = 27, invocationCount=3)
 	public void verifyPostANewReply_ViewReplyToThisThread() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -928,7 +928,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Click on Disc Categories-->Click on First Thread-->>Click on Reply to This Thread-->Enter Description and Click on Preview Post Button
-	@Test(priority = 28)
+	@Test(priority = 28, invocationCount=3)
 	public void verifyPreviewPost_DiscCategoriesReplyToThisThreadBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -960,7 +960,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on Reply To this Thread at Bottom-->Enter Description and Click on Preview Post Button
-	@Test(priority = 29)
+	@Test(priority = 29, invocationCount=3)
 	public void verifyPreviewPost_SearchResultsReplyToThisThreadBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -993,7 +993,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Preview Post Button
 	// Enter Keyword in Search box-->Click on First View Button->>Click on Reply To This Thread at Bottom-->Enter Description and Click on Preview Post Button
-	@Test(priority = 30)
+	@Test(priority = 30, invocationCount=3)
 	public void verifyPreviewPost_ViewReplyToThisThreadBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -1028,7 +1028,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 
 	// Verify Submit Reply Button
 	// Click on Disc Categories-->Click on First Thread-->>Click on Reply To This Thread at Bottom-->Enter Description and Click on Submit Reply Button
-	@Test(priority = 31)
+	@Test(priority = 31, invocationCount=3)
 	public void verifySubmitReply_DiscCategoriesReplyToThisThreadBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -1064,7 +1064,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 	// Verify Submit Reply Button
 	// Enter Keyword in Search box-->Click on First Thread-->>Click on Reply To This Thread at Bottom
 	// Enter Description and Click on Submit Reply Button
-	@Test(priority = 32)
+	@Test(priority = 32, invocationCount=3)
 	public void verifySubmitReply_SearchResultsReplyToThisThreadBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -1101,7 +1101,7 @@ public class AddEditDeleteReplyTest extends TestBase {
 	// Verify Submit Reply Button
 	// Enter Keyword in Search box-->Click on First View Button-->>Click on Reply To This Thread at Bottom
 	// Enter Description and Click on Submit Reply Button
-	@Test(priority = 33)
+	@Test(priority = 33, invocationCount=3)
 	public void verifySubmitReply_ViewReplyToThisThreadBtn() throws InterruptedException {
 		SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
@@ -1136,18 +1136,18 @@ public class AddEditDeleteReplyTest extends TestBase {
 	}
 
 	
-	//Verify Delete Post
-	@Test(priority = 34)
-	public void vrifyDeleteReply() throws InterruptedException
+	//Verify Delete Reply
+	@Test(priority = 34, invocationCount=3)
+	public void verifyDeleteReply() throws InterruptedException
 	{
 		//SoftAssert S1 = new SoftAssert();
 		testUtilObj.loginWithActiveAccount();
 		AddEditDeleteTopicObj.clickProfileLink();
-		int TotalElements=AddEditDeleteReplyObj.TheadTitleOnMemberPage();
+		int TotalElements=AddEditDeleteReplyObj.ThreadReplyOnMemberPage();
 		for(int i=0;i<TotalElements;i++)
 		{
 		AddEditDeleteTopicObj.clickProfileLink();
-		AddEditDeleteReplyObj.clickFirstTheadTitleOnMemberPage();
+		AddEditDeleteReplyObj.clickFirstThreadReplyOnMemberPage();
 		AddEditDeleteReplyObj.clickEditBtn();
 		AddEditDeleteTopicObj.clickChkBxDelete();
 		AddEditDeleteTopicObj.clickBtnDeletePost();
@@ -1157,6 +1157,29 @@ public class AddEditDeleteReplyTest extends TestBase {
 		System.out.println("Verified the Reply is Deleted using Delete Button");
 		
 	}
+	
+	
+	//Verify Delete Post
+		@Test(priority = 35, invocationCount=3)
+		public void verifyDeleteThread() throws InterruptedException
+		{
+			//SoftAssert S1 = new SoftAssert();
+			testUtilObj.loginWithActiveAccount();
+			AddEditDeleteTopicObj.clickProfileLink();
+			int TotalElements=AddEditDeleteReplyObj.ThreadTitleOnMemberPage();
+			for(int i=0;i<TotalElements;i++)
+			{
+			AddEditDeleteTopicObj.clickProfileLink();
+			AddEditDeleteReplyObj.clickFirstThreadTitleOnMemberPage();
+			AddEditDeleteReplyObj.clickEditBtn();
+			AddEditDeleteTopicObj.clickChkBxDelete();
+			AddEditDeleteTopicObj.clickBtnDeletePost();
+			AddEditDeleteTopicObj.clickProfileLink();
+			}
+			testUtilObj.logOut();
+			System.out.println("Verified the Delete  Theard using delete Button");
+			
+		}
 	
 	@AfterClass
 	public void TearDown() {

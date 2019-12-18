@@ -3,14 +3,11 @@ package com.agriville.qa.testcases;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import com.agriville.qa.base.TestBase;
 import com.agriville.qa.pages.homePageAgriville;
 import com.agriville.qa.util.testUtil;
@@ -24,7 +21,6 @@ public class homePageAgrivilleTest extends TestBase
 		super();
 	}
 	
-	@BeforeClass
 	public void SetUp()
 	{
 		intialization();
