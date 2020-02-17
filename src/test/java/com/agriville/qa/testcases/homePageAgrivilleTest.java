@@ -6,26 +6,31 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import com.agriville.qa.base.TestBase;
 import com.agriville.qa.pages.homePageAgriville;
+import com.agriville.qa.pages.memberList;
 import com.agriville.qa.util.testUtil;
 
 public class homePageAgrivilleTest extends TestBase 
 {
 	homePageAgriville homePageAgrivilleObj;
 	testUtil testUtilObj;
+	memberList memberListObj;
 	public homePageAgrivilleTest()
 	{
 		super();
 	}
 	
+	@BeforeClass
 	public void SetUp()
 	{
 		intialization();
 		homePageAgrivilleObj = new homePageAgriville();
 		testUtilObj=new testUtil();
+		memberListObj=new memberList();
 		
 	}
 	
@@ -34,6 +39,7 @@ public class homePageAgrivilleTest extends TestBase
 	@Test(priority=1)
 	public void agrivilleLogoisDisplayed()
 	{
+		memberListObj.clickIAgreeCookies();
 		boolean flag=homePageAgrivilleObj.agrivilleLogoisDisplayed();
 		Assert.assertTrue(flag);
 		System.out.println("User is on Agriville Home page and Agriville Log is displayed");

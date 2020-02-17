@@ -67,7 +67,7 @@ public class homePageAgriville extends TestBase
 	@FindBy(xpath="//td[@class='app_label']/a[contains(text(),'Used Farm Equipment')]")
 	WebElement DropDownUsedFarmEquipment;
 	
-	@FindBy(xpath="//div[@id='used_intro_content_area']/h1[contains(text(),'Used Farm Equipment')]")
+	@FindBy(xpath="//h1[contains(text(),'Used Farm Equipment')]")
 	WebElement UsedFarmEquipmentH1;
 	
 	@FindBy(xpath="//td[@class='app_label']/a[contains(text(),'AgSearch')]")

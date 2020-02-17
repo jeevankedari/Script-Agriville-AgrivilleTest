@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Agriville Application Test Automation Test Suite]">
+  <listeners>
+    <listener class-name="com.agriville.qa.ExtentReportListener.ExtentReportListenerNG"/>
+  </listeners>
   <test thread-count="5" name="Agriville Test Cases(failed)">
     <classes>
       <class name="com.agriville.qa.testcases.homePageAgrivilleTest">
@@ -8,13 +11,9 @@
           <include name="verifyNavigationToUFEFromDropDown"/>
           <include name="verifySwitchDropDown"/>
           <include name="verifyNavigateToMobileSite"/>
-          <include name="verifyNavigationToClassifieds"/>
           <include name="verifyDiscussionCategories"/>
-          <include name="verifyNavigationToHomePageForums"/>
-          <include name="verifyNavigationToNews"/>
           <include name="verifyPrivacyPolicy"/>
           <include name="verifyCopyRight"/>
-          <include name="verifyNavigationToAgMarkets"/>
           <include name="verifyBtmAgrivilleLogo"/>
           <include name="verifyLoginAndRegisterLinkisDisplayed"/>
           <include name="verifyNavigationToAgCareersFromDropDown"/>
@@ -31,17 +30,12 @@
           <include name="verifyNavigationToRealEstateFromDropDown"/>
           <include name="verifySearchField"/>
           <include name="verifyNavigationToRegisterPage"/>
-          <include name="verifyNavigationToFarmsDotCom"/>
           <include name="verifyMostRecentThreads"/>
           <include name="verifyNavigationToPigChampFromDropDown"/>
-          <include name="agrivilleLogoisDisplayed"/>
-          <include name="verifyNavigationToNewsFromDropDown"/>
           <include name="verifyNavigationToForgotYourPwdFrmDropDwn"/>
           <include name="verifyLoginForm"/>
-          <include name="verifyNavigationToClassifiedsFromDropDown"/>
           <include name="verifyNavigationToAgrivilleCommunityFromDropDown"/>
           <include name="SetUp"/>
-          <include name="verifyNavigationToMarketsFromDropDown"/>
         </methods>
       </class> <!-- com.agriville.qa.testcases.homePageAgrivilleTest -->
     </classes>

@@ -2,7 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Agriville Application Test Automation Test Suite">
 
-	
+<listeners>
+<listener class-name="com.agriville.qa.ExtentReportListener.ExtentReportListenerNG"></listener>
+</listeners>
 
 <test name="Agriville Test Cases">
 		<classes>

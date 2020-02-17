@@ -75,6 +75,10 @@ public class memberProfile extends TestBase
 	@FindBy(xpath="//td[1]/table[1]//a[@class='username offline']//strong")
 	WebElement firstAuthorOnThreadDetails;
 	
+
+	
+	
+	
 	//Actions
 	public String tabContent()
 	{

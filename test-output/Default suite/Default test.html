@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>31/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 18 16:03:10 IST 2019</td>
+<td>Started on:</td><td>Tue Feb 11 17:42:56 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>599 seconds (599013 ms)</td>
+<tr><td>Total time:</td><td>618 seconds (618605 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,394 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyCopyRight()'><b>verifyCopyRight</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td><div><pre>java.lang.AssertionError: expected [© 2019 FARMS.COM - ALL RIGHTS RESERVED] but found [© 2020 FARMS.COM - ALL RIGHTS RESERVED]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyCopyRight(homePageAgrivilleTest.java:626)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace22372731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace22372731'><pre>java.lang.AssertionError: expected [© 2019 FARMS.COM - ALL RIGHTS RESERVED] but found [© 2020 FARMS.COM - ALL RIGHTS RESERVED]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyCopyRight(homePageAgrivilleTest.java:626)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyDiscussionCategories()'><b>verifyDiscussionCategories</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Title do not Match for Practice did not expect to find [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyDiscussionCategories(homePageAgrivilleTest.java:447)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace11503533", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace11503533'><pre>java.lang.AssertionError: The following asserts failed:
+	Title do not Match for Practice did not expect to find [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyDiscussionCategories(homePageAgrivilleTest.java:447)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToForgotYourPwdFrmDropDwn()'><b>verifyNavigationToForgotYourPwdFrmDropDwn</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[@class=&apos;left&apos;]&quot;}
+  (Session info: chrome=80.0.3987.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PUNE-JEEVANK-DT&apos;, ip: &apos;192.168.25.166&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 80.0.3987.87, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\JEEVAN~1.KED\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55969}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ba752a43ce7c28344756d5d92991b14
+*** Element info: {Using=xpath, value=//h1[@class=&apos;left&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.getText(Unknown Source)
+	at com.agriville.qa.pages.homePageAgriville.ForgotPwdH1(homePageAgriville.java:441)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToForgotYourPwdFrmDropDwn(homePageAgrivilleTest.java:364)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace28540570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace28540570'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[@class=&apos;left&apos;]&quot;}
+  (Session info: chrome=80.0.3987.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PUNE-JEEVANK-DT&apos;, ip: &apos;192.168.25.166&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 80.0.3987.87, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\JEEVAN~1.KED\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55969}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ba752a43ce7c28344756d5d92991b14
+*** Element info: {Using=xpath, value=//h1[@class=&apos;left&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.getText(Unknown Source)
+	at com.agriville.qa.pages.homePageAgriville.ForgotPwdH1(homePageAgriville.java:441)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToForgotYourPwdFrmDropDwn(homePageAgrivilleTest.java:364)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>68</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToRegisterNowFrmDropDwn()'><b>verifyNavigationToRegisterNowFrmDropDwn</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=80.0.3987.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PUNE-JEEVANK-DT&apos;, ip: &apos;192.168.25.166&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 80.0.3987.87, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\JEEVAN~1.KED\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55969}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ba752a43ce7c28344756d5d92991b14
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.agriville.qa.pages.homePageAgriville.clickOnRegisterNowLink(homePageAgriville.java:446)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToRegisterNowFrmDropDwn(homePageAgrivilleTest.java:381)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2452864", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2452864'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=80.0.3987.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PUNE-JEEVANK-DT&apos;, ip: &apos;192.168.25.166&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 80.0.3987.87, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\JEEVAN~1.KED\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55969}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ba752a43ce7c28344756d5d92991b14
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.agriville.qa.pages.homePageAgriville.clickOnRegisterNowLink(homePageAgriville.java:446)
+	at com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToRegisterNowFrmDropDwn(homePageAgrivilleTest.java:381)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>64</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,75 +463,160 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifyForumFrmPersonalMsg()'><b>verifyForumFrmPersonalMsg</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.agrivilleLogoisDisplayed()'><b>agrivilleLogoisDisplayed</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>40</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>0</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifyForumFromHP()'><b>verifyForumFromHP</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyAboutUS()'><b>verifyAboutUS</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>31</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>4</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifyMemberListPageFrmHP()'><b>verifyMemberListPageFrmHP</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyBtmAgrivilleLogo()'><b>verifyBtmAgrivilleLogo</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>36</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>2</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifyMemberListPageFrmPersonalMsg()'><b>verifyMemberListPageFrmPersonalMsg</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyChatPostGuideLines()'><b>verifyChatPostGuideLines</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>42</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>6</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifyNavigationToListFromHP()'><b>verifyNavigationToListFromHP</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyContactUS()'><b>verifyContactUS</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>42</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>15</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifyNavigationToListFromPersonalMsg()'><b>verifyNavigationToListFromPersonalMsg</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyLoginAndRegisterLinkisDisplayed()'><b>verifyLoginAndRegisterLinkisDisplayed</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>29</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>10</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortPostFrmPersonalMsgAsc()'><b>verifySortPostFrmPersonalMsgAsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyLoginForm()'><b>verifyLoginForm</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>61</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>12</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortPostFrmUserNameAsc()'><b>verifySortPostFrmUserNameAsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyMostPopularThreads()'><b>verifyMostPopularThreads</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>40</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>4</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortPostFrmUserNameDsc()'><b>verifySortPostFrmUserNameDsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
-<td></td>
-<td>32</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
-<tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortPostsFrmPersonalMsgDsc()'><b>verifySortPostsFrmPersonalMsgDsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyMostRecentThreads()'><b>verifyMostRecentThreads</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
 <td>43</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortUserNameFrmPersonalMsgAsc()'><b>verifySortUserNameFrmPersonalMsgAsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigateToMobileSite()'><b>verifyNavigateToMobileSite</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>36</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>10</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortUserNameFrmPersonalMsgDsc()'><b>verifySortUserNameFrmPersonalMsgDsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToAgCareersFromDropDown()'><b>verifyNavigationToAgCareersFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>41</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>20</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortUserNameFrmUserNameAsc()'><b>verifySortUserNameFrmUserNameAsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToAgMarkets()'><b>verifyNavigationToAgMarkets</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>46</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>18</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 <tr>
-<td title='com.agriville.qa.testcases.memberListTest.verifySortUserNameFrmUserNameDsc()'><b>verifySortUserNameFrmUserNameDsc</b><br>Test class: com.agriville.qa.testcases.memberListTest</td>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToAgSearchFromDropDown()'><b>verifyNavigationToAgSearchFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
 <td></td>
-<td>37</td>
-<td>com.agriville.qa.testcases.memberListTest@bbe345</td></tr>
+<td>20</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToAgrivilleCommunityFromDropDown()'><b>verifyNavigationToAgrivilleCommunityFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>25</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToClassifieds()'><b>verifyNavigationToClassifieds</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>15</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToClassifiedsFromDropDown()'><b>verifyNavigationToClassifiedsFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>13</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToFarmsAppsFromDropDown()'><b>verifyNavigationToFarmsAppsFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>13</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToFarmsDotCom()'><b>verifyNavigationToFarmsDotCom</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>13</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToHomePageForums()'><b>verifyNavigationToHomePageForums</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>6</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToMarketsFromDropDown()'><b>verifyNavigationToMarketsFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>14</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToNews()'><b>verifyNavigationToNews</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>14</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToNewsFromDropDown()'><b>verifyNavigationToNewsFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>12</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToPigChampFromDropDown()'><b>verifyNavigationToPigChampFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>19</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToRealEstateFromDropDown()'><b>verifyNavigationToRealEstateFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>17</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToRegisterPage()'><b>verifyNavigationToRegisterPage</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>11</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToRiskMgmtFromDropDown()'><b>verifyNavigationToRiskMgmtFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>19</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyNavigationToUFEFromDropDown()'><b>verifyNavigationToUFEFromDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>12</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyPrivacyPolicy()'><b>verifyPrivacyPolicy</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>5</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifySearchField()'><b>verifySearchField</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>5</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifySwitchDropDown()'><b>verifySwitchDropDown</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>10</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
+<tr>
+<td title='com.agriville.qa.testcases.homePageAgrivilleTest.verifyTermsOfUse()'><b>verifyTermsOfUse</b><br>Test class: com.agriville.qa.testcases.homePageAgrivilleTest</td>
+<td></td>
+<td>7</td>
+<td>com.agriville.qa.testcases.homePageAgrivilleTest@bbe345</td></tr>
 </table><p>
 </body>
 </html>

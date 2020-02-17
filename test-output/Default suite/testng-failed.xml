@@ -3,21 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.agriville.qa.testcases.memberListTest">
+      <class name="com.agriville.qa.testcases.homePageAgrivilleTest">
         <methods>
-          <include name="verifySortUserNameFrmPersonalMsgAsc"/>
-          <include name="verifySortPostFrmPersonalMsgAsc"/>
-          <include name="verifySortUserNameFrmPersonalMsgDsc"/>
+          <include name="verifyNavigationToRegisterNowFrmDropDwn"/>
+          <include name="verifyNavigationToForgotYourPwdFrmDropDwn"/>
           <include name="TearDown"/>
-          <include name="verifySortUserNameFrmUserNameDsc"/>
-          <include name="verifySortUserNameFrmUserNameAsc"/>
-          <include name="verifySortPostsFrmPersonalMsgDsc"/>
-          <include name="verifySortPostFrmUserNameAsc"/>
-          <include name="verifyForumFrmPersonalMsg"/>
           <include name="SetUp"/>
-          <include name="verifySortPostFrmUserNameDsc"/>
+          <include name="verifyDiscussionCategories"/>
+          <include name="verifyCopyRight"/>
         </methods>
-      </class> <!-- com.agriville.qa.testcases.memberListTest -->
+      </class> <!-- com.agriville.qa.testcases.homePageAgrivilleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

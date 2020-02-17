@@ -47,6 +47,7 @@ public class memberListTest extends TestBase
 	String sheetName4 = "EditProfile";
 	String sheetName5 = "EditPassword";
 	String sheetName6 = "MemberList";
+	String sheetName7="QuickNavigation";
 	
 	public memberListTest()
 	{
@@ -86,7 +87,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		String MemberListTitle=memberListObj.MemberListTitle();
@@ -117,7 +118,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		String MemberListTitle=memberListObj.MemberListTitle();
@@ -145,7 +146,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -208,7 +209,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -268,7 +269,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		memberListObj.clickLinkForum();
@@ -300,7 +301,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		memberListObj.clickLinkForum();
@@ -332,7 +333,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -369,7 +370,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -409,7 +410,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -433,7 +434,7 @@ public class memberListTest extends TestBase
 		testUtilObj.logOut();
 		loginPageObj.clickAgrivilleLogo();
 		
-		System.out.println("Personal: Verified the Member List in Ascending Order");
+		System.out.println("Personal Message: Verified the Member List in Ascending Order");
 	}
 	
 	
@@ -449,7 +450,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -489,7 +490,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -526,7 +527,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -565,7 +566,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -604,7 +605,7 @@ public class memberListTest extends TestBase
 		memberListObj.clearRecipients();
 		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
 		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
-		memberListObj.clickBtnSubmitMsg();
+		memberListObj.clickBtnSubmit();
 		memberListObj.clickLinkmemberList();
 		testUtil.Switch_To_ChildTab();
 		
@@ -629,6 +630,407 @@ public class memberListTest extends TestBase
 		loginPageObj.clickAgrivilleLogo();
 		System.out.println("Personal Message: Verified the Member List in Descending Order");
 	}
+	
+	@Test(priority=15)
+	public void verifyPaginationFrmPersonalMsg() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		updateProfileAndPwdObj.clickdownArrow();
+		memberListObj.clickPersonalMsg();
+		memberListObj.ClickInboxSendMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		
+		//Navigation to second Page
+		String secondPage=memberListObj.clickOnSecondPage();
+		S1.assertEquals(secondPage, "2");
+		
+		//Navigation to First Page
+		String firstPage=memberListObj.clickOnFirstPage();
+		S1.assertEquals(firstPage, "1");
+		
+		//Click on Next Button
+		memberListObj.clickBtnNext();
+		String nextBtn=memberListObj.getValueNextBtn();
+		S1.assertEquals(nextBtn, "2");
+		
+		//Navigation to First Page
+		String previouspage=memberListObj.clickOnFirstPage();
+		S1.assertEquals(previouspage, "1");
+		
+		//Navigation using Last Arrow Button
+		memberListObj.clickBtnLast();
+		
+		//Navigation to First Page
+		String firstPage1=memberListObj.getValueLastBtn();
+		S1.assertEquals(firstPage1, "1");
+		
+		//Navigation using previous Button
+		memberListObj.clickOnSecondPage();
+		memberListObj.clickBtnPrevious();
+		String previousBtn=memberListObj.getValuePreviousBtn();
+		S1.assertEquals(previousBtn, "1");
+		
+		//Navigation using First Arrow Button Button
+		memberListObj.clickOnSecondPage();
+		String nextBtn1=memberListObj.getValueNextBtn();
+		S1.assertEquals(nextBtn1, "2");
+		memberListObj.clickBtnFirst();
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		
+		System.out.println("Personal Message:Verified the Navigation on Members Page ");
+		
+		
+		
+	}
+	
+	@Test(priority=16)
+	public void verifyPaginationFrmUserName() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		AddEditDeleteTopicObj.clickProfileLink();
+		memberProfileObj.clicksendPrivateMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		
+		//Navigation to second Page
+		String secondPage=memberListObj.clickOnSecondPage();
+		S1.assertEquals(secondPage, "2");
+		
+		//Navigation to First Page
+		String firstPage=memberListObj.clickOnFirstPage();
+		S1.assertEquals(firstPage, "1");
+		
+		//Click on Next Button
+		memberListObj.clickBtnNext();
+		String nextBtn=memberListObj.getValueNextBtn();
+		S1.assertEquals(nextBtn, "2");
+		
+		//Navigation to First Page
+		String previouspage=memberListObj.clickOnFirstPage();
+		S1.assertEquals(previouspage, "1");
+		
+		//Navigation using Last Arrow Button
+		memberListObj.clickBtnLast();
+		
+		//Navigation to First Page
+		String firstPage1=memberListObj.getValueLastBtn();
+		S1.assertEquals(firstPage1, "1");
+		
+		//Navigation using previous Button
+		memberListObj.clickOnSecondPage();
+		memberListObj.clickBtnPrevious();
+		String previousBtn=memberListObj.getValuePreviousBtn();
+		S1.assertEquals(previousBtn, "1");
+		
+		//Navigation using First Arrow Button Button
+		memberListObj.clickOnSecondPage();
+		String nextBtn1=memberListObj.getValueNextBtn();
+		S1.assertEquals(nextBtn1, "2");
+		memberListObj.clickBtnFirst();
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		
+		System.out.println("User Name: Verified the Navigation on Members Page ");
+		
+		
+		
+	}
+	
+	@Test(priority=17)
+	public void verifyNavigationDropdownFrmPersonalMessage() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		updateProfileAndPwdObj.clickdownArrow();
+		memberListObj.clickPersonalMsg();
+		memberListObj.ClickInboxSendMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		
+		testUtil.Scroll_DownFull_Page();
+		memberListObj.clickquickNavigationBtm();
+		
+		ArrayList<String> listObj=memberListObj.getListsiteAreas();
+		
+		for(int i=0;i<listObj.size();i++)
+		{
+			String str=ExcelDataUtilObj.getData(sheetName7, i+1, 0);
+			S1.assertEquals(listObj.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 0));
+		}
+		
+		String AgrivilleComunication=memberListObj.AgrivilleComunication();
+		S1.assertTrue(AgrivilleComunication.contains("Agriville.com"));
+		ArrayList<String> listObj1=memberListObj.getListForums();
+		
+		for(int i=0;i<listObj1.size();i++)
+		{
+			
+			S1.assertEquals(listObj1.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 1));
+		}
+	
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Personal Message: Verified the Values in Navigation Dropdown ");
+	}
+	
+	
+	@Test(priority=18)
+	public void verifyNavigationDropdownFrmUserName() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		AddEditDeleteTopicObj.clickProfileLink();
+		memberProfileObj.clicksendPrivateMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		testUtil.Scroll_DownFull_Page();
+		memberListObj.clickquickNavigationBtm();
+		
+		ArrayList<String> listObj=memberListObj.getListsiteAreas();
+		
+		for(int i=0;i<listObj.size();i++)
+		{
+			String str=ExcelDataUtilObj.getData(sheetName7, i+1, 0);
+			S1.assertEquals(listObj.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 0));
+		}
+		
+		String AgrivilleComunication=memberListObj.AgrivilleComunication();
+		S1.assertTrue(AgrivilleComunication.contains("Agriville.com"));
+		ArrayList<String> listObj1=memberListObj.getListForums();
+		
+		for(int i=0;i<listObj1.size();i++)
+		{
+			
+			S1.assertEquals(listObj1.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 1));
+		}
+	
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("UserName: Verified the Values in Navigation Dropdown ");
+	}
+	
+	
+	@Test(priority=19)
+	public void verifyNavigationFromSiteAreasFrmPersonalMsg() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		updateProfileAndPwdObj.clickdownArrow();
+		memberListObj.clickPersonalMsg();
+		memberListObj.ClickInboxSendMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		
+		testUtil.Scroll_DownFull_Page();
+		memberListObj.clickquickNavigationBtm();
+		ArrayList<String> ListAreas=memberListObj.clickListsiteAreas();
+		
+		for(int i=0;i<ListAreas.size();i++)
+		{
+//			String str=ExcelDataUtilObj.getData(sheetName7, i+1, 2);
+			S1.assertEquals(ListAreas.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 2));
+		}
+		
+		ArrayList<String> ListAreas1=memberListObj.clickListsiteAreas1();
+		
+		for(int i=0;i<ListAreas1.size();i++)
+		{
+			
+//			String str=ExcelDataUtilObj.getData(sheetName7, i+4, 2);
+			S1.assertEquals(ListAreas1.get(i), ExcelDataUtilObj.getData(sheetName7, i+4, 2));
+		}
+		
+		memberListObj.clickquickNavigationBtm();
+		memberListObj.clickforumHome();
+		String getTitle=testUtil.getTitleOfPage();
+		S1.assertEquals(getTitle, "Farming and Agriculture Discussion Forum | Agriville.com");
+		testUtil.navigateToPreviouPage();
+		memberListObj.clickquickNavigationBtm();
+		memberListObj.clickAgrivilleComunication();
+		String TitleThread=searchTopicObj.ColThreadTitleStarter();
+		S1.assertEquals(TitleThread,"TITLE / THREAD STARTER");
+		String Author=searchTopicObj.ColAuthor();
+		S1.assertEquals(Author,"AUTHOR");
+		String ReplyViews=memberListObj.ColRepliesView();
+		S1.assertEquals(ReplyViews,"REPLIES");
+		String LastPostBy=searchTopicObj.ColLastPostBy();
+		S1.assertEquals(LastPostBy,"LAST POST BY");
+		testUtil.navigateToPreviouPage();
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Personal Message: Verified the Navigation Dropdown ");
+	}
+	
+	
+	@Test(priority=20)
+	public void verifyNavigationFromSiteAreasFrmUserName() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		AddEditDeleteTopicObj.clickProfileLink();
+		memberProfileObj.clicksendPrivateMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		
+		testUtil.Scroll_DownFull_Page();
+		memberListObj.clickquickNavigationBtm();
+		ArrayList<String> ListAreas=memberListObj.clickListsiteAreas();
+		
+		for(int i=0;i<ListAreas.size();i++)
+		{
+//			String str=ExcelDataUtilObj.getData(sheetName7, i+1, 2);
+			S1.assertEquals(ListAreas.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 2));
+		}
+		
+		ArrayList<String> ListAreas1=memberListObj.clickListsiteAreas1();
+		
+		for(int i=0;i<ListAreas1.size();i++)
+		{
+			
+//			String str=ExcelDataUtilObj.getData(sheetName7, i+4, 2);
+			S1.assertEquals(ListAreas1.get(i), ExcelDataUtilObj.getData(sheetName7, i+4, 2));
+		}
+		
+		memberListObj.clickquickNavigationBtm();
+		memberListObj.clickforumHome();
+		String getTitle=testUtil.getTitleOfPage();
+		S1.assertEquals(getTitle, "Farming and Agriculture Discussion Forum | Agriville.com");
+		testUtil.navigateToPreviouPage();
+		memberListObj.clickquickNavigationBtm();
+		memberListObj.clickAgrivilleComunication();
+		String TitleThread=searchTopicObj.ColThreadTitleStarter();
+		S1.assertEquals(TitleThread,"TITLE / THREAD STARTER");
+		String Author=searchTopicObj.ColAuthor();
+		S1.assertEquals(Author,"AUTHOR");
+		String ReplyViews=memberListObj.ColRepliesView();
+		S1.assertEquals(ReplyViews,"REPLIES");
+		String LastPostBy=searchTopicObj.ColLastPostBy();
+		S1.assertEquals(LastPostBy,"LAST POST BY");
+		testUtil.navigateToPreviouPage();
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Home Page:Verified the Navigation Dropdown ");
+	}
+	@Test(priority=21)
+	public void verifyNavigationFromForumsFrmPersonalMsg() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		updateProfileAndPwdObj.clickdownArrow();
+		memberListObj.clickPersonalMsg();
+		memberListObj.ClickInboxSendMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		
+		testUtil.Scroll_DownFull_Page();
+
+		ArrayList<String> ListForums=memberListObj.clickListForums();
+		for(int i=0;i<ListForums.size();i++)
+		{
+			S1.assertEquals(ListForums.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 3));
+		}
+		
+		
+		
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("Personal Message: Verified the Navigation Dropdown ");
+	}
+	
+	@Test(priority=22)
+	public void verifyNavigationFromForumsFrmUserName() throws InterruptedException
+	{
+		memberListObj.clickIAgreeCookies();
+		SoftAssert S1=new SoftAssert();
+		testUtilObj.loginWithActiveAccount();
+		AddEditDeleteTopicObj.clickProfileLink();
+		memberProfileObj.clicksendPrivateMsg();
+		memberListObj.clearRecipients();
+		memberListObj.Title(ExcelDataUtilObj.getData(sheetName6, 1, 1));
+		memberListObj.RTBxEditor(ExcelDataUtilObj.getData(sheetName6, 1, 2));
+		memberListObj.clickBtnSubmit();
+		memberListObj.clickLinkmemberList();
+		testUtil.Switch_To_ChildTab();
+		
+		testUtil.Scroll_DownFull_Page();
+
+		ArrayList<String> ListForums=memberListObj.clickListForums();
+		for(int i=0;i<ListForums.size();i++)
+		{
+			S1.assertEquals(ListForums.get(i), ExcelDataUtilObj.getData(sheetName7, i+1, 3));
+		}
+		
+		
+		
+		
+		S1.assertAll();
+		testUtil.Close_Tab_Switch_To_ParentTab();
+		testUtilObj.logOut();
+		loginPageObj.clickAgrivilleLogo();
+		System.out.println("User Name: Verified the Navigation Dropdown ");
+	}
+	
+	
 	
 	@AfterClass
 	public void TearDown()

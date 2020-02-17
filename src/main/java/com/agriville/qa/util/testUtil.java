@@ -10,8 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.agriville.qa.base.TestBase;
+import com.agriville.qa.pages.AddEditDeleteTopic;
 import com.agriville.qa.pages.loginPage;
+import com.agriville.qa.pages.memberList;
+import com.agriville.qa.pages.memberProfile;
 import com.agriville.qa.pages.searchTopic;
+import com.agriville.qa.pages.updateProfileAndPwd;
 
 public class testUtil extends TestBase
 {
@@ -196,8 +200,14 @@ public static void clickLocator(WebElement locator)
 	String sheetName="Disc_Categories";
 	String sheetName1="Disc_CategoriesLogin";
 	loginPage loginPageObj=new loginPage();
+	updateProfileAndPwd updateProfileAndPwdObj=new updateProfileAndPwd();
+	memberList memberListObj=new memberList();
+	
+	
 	ExcelDataUtil ExcelDataUtilObj=new ExcelDataUtil(Path);
 	searchTopic searchTopicObj=new searchTopic();
+	AddEditDeleteTopic AddEditDeleteTopicObj= new AddEditDeleteTopic();
+	memberProfile memberProfileObj=new memberProfile();
 	
 //Login with Active Account and Click on Beef Production
 	public void loginWithActiveAccount() throws InterruptedException
@@ -235,8 +245,31 @@ public static void clickLocator(WebElement locator)
 		loginPageObj.clickLoginBtnOnLoginFrame();
 		
 	} 
-
-
 	
 	
+	public void NavigateToContentPage() throws InterruptedException
+	{
+	
+	loginPageObj.clickLogin();
+	Thread.sleep(4000);
+	loginPageObj.UserName(ExcelDataUtilObj.getData(sheetName1, 2, 0));
+	loginPageObj.Password(ExcelDataUtilObj.getData(sheetName1, 2, 1));
+	loginPageObj.clickLoginBtnOnLoginFrame();
+	AddEditDeleteTopicObj.clickProfileLink();
+
+	}
+
+	
+	public void NavigateToInbox() throws InterruptedException
+	{
+		loginPageObj.clickLogin();
+		Thread.sleep(4000);
+		loginPageObj.UserName(ExcelDataUtilObj.getData(sheetName1, 2, 0));
+		loginPageObj.Password(ExcelDataUtilObj.getData(sheetName1, 2, 1));
+		loginPageObj.clickLoginBtnOnLoginFrame();
+		updateProfileAndPwdObj.clickdownArrow();
+		memberListObj.clickPersonalMsg();
+
+	
+	}
 }
